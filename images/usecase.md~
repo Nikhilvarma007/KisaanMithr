@@ -1,0 +1,1627 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8054a"
+    charSet    	0)
+
+(object Design "Logical View"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"5DC611110371"
+    defaults   	(object defaults
+	rightMargin 	0.250000
+	leftMargin 	0.250000
+	topMargin  	0.250000
+	bottomMargin 	0.500000
+	pageOverlap 	0.250000
+	clipIconLabels 	TRUE
+	autoResize 	TRUE
+	snapToGrid 	TRUE
+	gridX      	16
+	gridY      	16
+	defaultFont 	(object Font
+	    size       	10
+	    face       	"Arial"
+	    bold       	FALSE
+	    italics    	FALSE
+	    underline  	FALSE
+	    strike     	FALSE
+	    color      	0
+	    default_color 	TRUE)
+	showMessageNum 	1
+	showClassOfObject 	TRUE
+	notation   	"Unified")
+    root_usecase_package 	(object Class_Category "Use Case View"
+	quid       	"5DC611110373"
+	exportControl 	"Public"
+	global     	TRUE
+	logical_models 	(list unit_reference_list
+	    (object Mechanism @1
+		logical_models 	(list unit_reference_list
+		    (object Object "Admin"
+			quid       	"5DC615A401FA"
+			collaborators 	(list link_list
+			    (object Link
+				quid       	"5DC61603005E"
+				supplier   	"System"
+				quidu      	"5DC615AD026A"
+				messages   	(list Messages
+				    (object Message "Login"
+					quid       	"5DC61603005F"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	0)
+				    (object Message "View Donors/hostels list"
+					quid       	"5DC616730323"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	3)
+				    (object Message "View Orphanages List"
+					quid       	"5DC61698008C"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	4)
+				    (object Message "view donations"
+					quid       	"5DC6177603DD"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	8)
+				    (object Message "Logout"
+					quid       	"5DC617840337"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	9)
+				    (object Message "Delete orphanages and Hostels"
+					quid       	"5DC617AC02E0"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	6))))
+			persistence 	"Transient"
+			multi      	FALSE)
+		    (object Object "System"
+			quid       	"5DC615AD026A"
+			persistence 	"Transient"
+			multi      	FALSE)
+		    (object Object "Donor/Hostel"
+			quid       	"5DC615B600C3"
+			collaborators 	(list link_list
+			    (object Link
+				quid       	"5DC6161B0277"
+				supplier   	"System"
+				quidu      	"5DC615AD026A"
+				messages   	(list Messages
+				    (object Message "Register"
+					quid       	"5DC6161B0278"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	1)
+				    (object Message ""
+					quid       	"5DC61752007C"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	10)))
+			    (object Link
+				quid       	"5DC616F700A2"
+				supplier   	"Donor/Hostel"
+				quidu      	"5DC615B600C3"
+				messages   	(list Messages
+				    (object Message "login"
+					quid       	"5DC616F700A3"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	2))))
+			persistence 	"Transient"
+			multi      	FALSE)
+		    (object Object "Orphanage"
+			quid       	"5DC615D203B3"
+			collaborators 	(list link_list
+			    (object Link
+				quid       	"5DC6161301F7"
+				supplier   	"System"
+				quidu      	"5DC615AD026A"
+				messages   	(list Messages
+				    (object Message "Register"
+					quid       	"5DC6161301F8"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	5)
+				    (object Message "view food"
+					quid       	"5DC616D50167"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	11)))
+			    (object Link
+				quid       	"5DC616EB006A"
+				supplier   	"Orphanage"
+				quidu      	"5DC615D203B3"
+				messages   	(list Messages
+				    (object Message "login"
+					quid       	"5DC616EB006B"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	7))))
+			persistence 	"Transient"
+			multi      	FALSE))))
+	logical_presentations 	(list unit_reference_list
+	    (object UseCaseDiagram "Main"
+		quid       	"5DC6111200DD"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))
+	    (object UseCaseDiagram "NewDiagram"
+		quid       	"5DC615820150"
+		title      	"NewDiagram"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))
+	    (object InteractionDiagram "NewDiagram2"
+		mechanism_ref 	@1
+		quid       	"5DC615980299"
+		title      	"NewDiagram2"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object InterObjView "Admin" @2
+			location   	(448, 224)
+			font       	(object Font
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@2
+			    location   	(448, 224)
+			    fill_color 	12058623
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	282
+			    justify    	0
+			    label      	"Admin")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DC615A401FA"
+			width      	300
+			height     	1489
+			icon_height 	0
+			icon_width 	0
+			annotation 	1
+			Focus_Of_Control 	(object Focus_Of_Control "" @3
+			    location   	(448, 368)
+			    line_color 	3342489
+			    InterObjView 	@2
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @4
+			    location   	(448, 560)
+			    line_color 	3342489
+			    InterObjView 	@2
+			    height     	184
+			    y_coord    	124
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @5
+			    location   	(448, 752)
+			    line_color 	3342489
+			    InterObjView 	@2
+			    height     	136
+			    y_coord    	76
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @6
+			    location   	(448, 896)
+			    line_color 	3342489
+			    InterObjView 	@2
+			    height     	216
+			    y_coord    	156
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @7
+			    location   	(448, 1168)
+			    line_color 	3342489
+			    InterObjView 	@2
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE))
+		    (object InterObjView "System" @8
+			location   	(1008, 224)
+			font       	(object Font
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@8
+			    location   	(1008, 224)
+			    fill_color 	12058623
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	282
+			    justify    	0
+			    label      	"System")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DC615AD026A"
+			width      	300
+			height     	1489
+			icon_height 	0
+			icon_width 	0
+			annotation 	1
+			Focus_Of_Control 	(object Focus_Of_Control "" @9
+			    location   	(1008, 368)
+			    line_color 	3342489
+			    InterObjView 	@8
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @10
+			    location   	(1008, 384)
+			    line_color 	3342489
+			    InterObjView 	@8
+			    height     	60
+			    y_coord    	0
+			    Nested     	TRUE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @11
+			    location   	(1008, 560)
+			    line_color 	3342489
+			    InterObjView 	@8
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @12
+			    location   	(1008, 624)
+			    line_color 	3342489
+			    InterObjView 	@8
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @13
+			    location   	(1008, 752)
+			    line_color 	3342489
+			    InterObjView 	@8
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @14
+			    location   	(1008, 768)
+			    line_color 	3342489
+			    InterObjView 	@8
+			    height     	60
+			    y_coord    	0
+			    Nested     	TRUE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @15
+			    location   	(1008, 992)
+			    line_color 	3342489
+			    InterObjView 	@8
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @16
+			    location   	(1008, 1168)
+			    line_color 	3342489
+			    InterObjView 	@8
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @17
+			    location   	(1008, 1296)
+			    line_color 	3342489
+			    InterObjView 	@8
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @18
+			    location   	(1008, 1504)
+			    line_color 	3342489
+			    InterObjView 	@8
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE))
+		    (object InterObjView "Donor/Hostel" @19
+			location   	(1552, 224)
+			font       	(object Font
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@19
+			    location   	(1552, 224)
+			    fill_color 	12058623
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	282
+			    justify    	0
+			    label      	"Donor/Hostel")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DC615B600C3"
+			width      	300
+			height     	1489
+			icon_height 	0
+			icon_width 	0
+			annotation 	1
+			Focus_Of_Control 	(object Focus_Of_Control "" @20
+			    location   	(1552, 384)
+			    line_color 	3342489
+			    InterObjView 	@19
+			    height     	216
+			    y_coord    	156
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @21
+			    location   	(1552, 1296)
+			    line_color 	3342489
+			    InterObjView 	@19
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE))
+		    (object InterObjView "Orphanage" @22
+			location   	(2240, 224)
+			font       	(object Font
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@22
+			    location   	(2240, 224)
+			    fill_color 	12058623
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	282
+			    justify    	0
+			    label      	"Orphanage")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DC615D203B3"
+			width      	300
+			height     	1489
+			icon_height 	0
+			icon_width 	0
+			annotation 	1
+			Focus_Of_Control 	(object Focus_Of_Control "" @23
+			    location   	(2240, 752)
+			    line_color 	3342489
+			    InterObjView 	@22
+			    height     	264
+			    y_coord    	204
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @24
+			    location   	(2240, 1504)
+			    line_color 	3342489
+			    InterObjView 	@22
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE))
+		    (object InterMessView "" @25
+			location   	(0, 368)
+			label      	(object SegLabel @26
+			    Parent_View 	@25
+			    location   	(696, 342)
+			    quidu      	"5DC61603005F"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	97
+			    justify    	0
+			    label      	"Login"
+			    pctDist    	0.441288
+			    height     	27
+			    orientation 	0)
+			line_color 	3342489
+			client     	@2
+			supplier   	@8
+			Focus_Src  	@3
+			Focus_Entry 	@9
+			origin     	(464, 368)
+			terminus   	(992, 368)
+			ordinal    	0)
+		    (object InterMessView "" @27
+			location   	(0, 752)
+			label      	(object SegLabel @28
+			    Parent_View 	@27
+			    location   	(1669, 741)
+			    quidu      	"5DC6161301F8"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	150
+			    justify    	0
+			    label      	"Register"
+			    pctDist    	0.462500
+			    height     	12
+			    orientation 	1)
+			line_color 	3342489
+			client     	@22
+			supplier   	@8
+			Focus_Src  	@23
+			Focus_Entry 	@13
+			origin     	(2224, 752)
+			terminus   	(1024, 752)
+			ordinal    	5)
+		    (object InterMessView "" @29
+			location   	(0, 384)
+			label      	(object SegLabel @30
+			    Parent_View 	@29
+			    location   	(1279, 373)
+			    quidu      	"5DC6161B0278"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	150
+			    justify    	0
+			    label      	"Register"
+			    pctDist    	0.501953
+			    height     	12
+			    orientation 	1)
+			line_color 	3342489
+			client     	@19
+			supplier   	@8
+			Focus_Src  	@20
+			Focus_Entry 	@10
+			origin     	(1536, 384)
+			terminus   	(1024, 384)
+			ordinal    	1)
+		    (object InterMessView "" @31
+			location   	(0, 560)
+			label      	(object SegLabel @32
+			    Parent_View 	@31
+			    location   	(739, 554)
+			    quidu      	"5DC616730323"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	434
+			    justify    	0
+			    label      	"View Donors/hostels list"
+			    pctDist    	0.522727
+			    height     	7
+			    orientation 	0)
+			line_color 	3342489
+			client     	@2
+			supplier   	@8
+			Focus_Src  	@4
+			Focus_Entry 	@11
+			origin     	(464, 560)
+			terminus   	(992, 560)
+			ordinal    	3)
+		    (object InterMessView "" @33
+			location   	(0, 624)
+			label      	(object SegLabel @34
+			    Parent_View 	@33
+			    location   	(709, 617)
+			    quidu      	"5DC61698008C"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	394
+			    justify    	0
+			    label      	"View Orphanages List"
+			    pctDist    	0.464015
+			    height     	8
+			    orientation 	0)
+			line_color 	3342489
+			client     	@2
+			supplier   	@8
+			Focus_Src  	@4
+			Focus_Entry 	@12
+			origin     	(464, 624)
+			terminus   	(992, 624)
+			ordinal    	4)
+		    (object InterMessView "" @35
+			location   	(0, 1504)
+			label      	(object SegLabel @36
+			    Parent_View 	@35
+			    location   	(1688, 1477)
+			    quidu      	"5DC616D50167"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	162
+			    justify    	0
+			    label      	"view food"
+			    pctDist    	0.447500
+			    height     	28
+			    orientation 	1)
+			line_color 	3342489
+			client     	@22
+			supplier   	@8
+			Focus_Src  	@24
+			Focus_Entry 	@18
+			origin     	(2224, 1504)
+			terminus   	(1024, 1504)
+			ordinal    	11)
+		    (object SelfMessView "" @37
+			location   	(0, 896)
+			label      	(object SegLabel @38
+			    Parent_View 	@37
+			    location   	(2331, 852)
+			    quidu      	"5DC616EB006B"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	84
+			    justify    	0
+			    label      	"login"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@22
+			supplier   	@22
+			Focus_Src  	@23
+			origin     	(2256, 896)
+			terminus   	(2406, 896)
+			ordinal    	7)
+		    (object SelfMessView "" @39
+			location   	(0, 480)
+			label      	(object SegLabel @40
+			    Parent_View 	@39
+			    location   	(1643, 454)
+			    quidu      	"5DC616F700A3"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	84
+			    justify    	0
+			    label      	"login"
+			    pctDist    	0.500000
+			    height     	27
+			    orientation 	0)
+			line_color 	3342489
+			client     	@19
+			supplier   	@19
+			Focus_Src  	@20
+			origin     	(1568, 480)
+			terminus   	(1718, 480)
+			ordinal    	2)
+		    (object InterMessView "" @41
+			location   	(0, 1296)
+			label      	(object SegLabel @42
+			    Parent_View 	@41
+			    location   	(1280, 1252)
+			    quidu      	"5DC61752007C"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	0
+			    justify    	0
+			    label      	""
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	1)
+			line_color 	3342489
+			client     	@19
+			supplier   	@8
+			Focus_Src  	@21
+			Focus_Entry 	@17
+			origin     	(1536, 1296)
+			terminus   	(1024, 1296)
+			ordinal    	10)
+		    (object InterMessView "" @43
+			location   	(0, 992)
+			label      	(object SegLabel @44
+			    Parent_View 	@43
+			    location   	(728, 949)
+			    quidu      	"5DC6177603DD"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	262
+			    justify    	0
+			    label      	"view donations"
+			    pctDist    	0.500000
+			    height     	44
+			    orientation 	0)
+			line_color 	3342489
+			client     	@2
+			supplier   	@8
+			Focus_Src  	@6
+			Focus_Entry 	@15
+			origin     	(464, 992)
+			terminus   	(992, 992)
+			ordinal    	8)
+		    (object InterMessView "" @45
+			location   	(0, 1168)
+			label      	(object SegLabel @46
+			    Parent_View 	@45
+			    location   	(711, 1124)
+			    quidu      	"5DC617840337"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	122
+			    justify    	0
+			    label      	"Logout"
+			    pctDist    	0.469697
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@2
+			supplier   	@8
+			Focus_Src  	@7
+			Focus_Entry 	@16
+			origin     	(464, 1168)
+			terminus   	(992, 1168)
+			ordinal    	9)
+		    (object InterMessView "" @47
+			location   	(0, 768)
+			label      	(object SegLabel @48
+			    Parent_View 	@47
+			    location   	(728, 825)
+			    quidu      	"5DC617AC02E0"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	566
+			    justify    	0
+			    label      	"Delete orphanages and Hostels"
+			    pctDist    	0.500000
+			    height     	57
+			    orientation 	1)
+			line_color 	3342489
+			client     	@2
+			supplier   	@8
+			Focus_Src  	@5
+			Focus_Entry 	@14
+			origin     	(464, 768)
+			terminus   	(992, 768)
+			ordinal    	6)))))
+    root_category 	(object Class_Category "Logical View"
+	quid       	"5DC611110372"
+	exportControl 	"Public"
+	global     	TRUE
+	subsystem  	"Component View"
+	quidu      	"5DC611110374"
+	logical_models 	(list unit_reference_list
+	    (object Class "Admin"
+		quid       	"5DC6112102C2"
+		stereotype 	"Actor")
+	    (object Class "Hostel/Donor"
+		quid       	"5DC613190238"
+		stereotype 	"Actor")
+	    (object Class "Orphanage"
+		quid       	"5DC613E10295"
+		stereotype 	"Actor")
+	    (object UseCase "Login"
+		quid       	"5DC611560115")
+	    (object UseCase "View Donations"
+		quid       	"5DC6115703D5")
+	    (object UseCase "view orphanage list"
+		quid       	"5DC6115902E5")
+	    (object UseCase "View Donor/hostels list"
+		quid       	"5DC6115B01BD")
+	    (object UseCase "logout"
+		quid       	"5DC612FB0022")
+	    (object UseCase "View Donated"
+		quid       	"5DC6134D01C5")
+	    (object UseCase "login"
+		quid       	"5DC61364007C")
+	    (object UseCase "Add food"
+		quid       	"5DC613790042")
+	    (object UseCase "Logout"
+		quid       	"5DC613B50187")
+	    (object UseCase "Register"
+		quid       	"5DC614200359")
+	    (object UseCase "View  food"
+		quid       	"5DC6145803B6")
+	    (object UseCase "Accept Food"
+		quid       	"5DC61462022D")
+	    (object Association "$UNNAMED$0"
+		quid       	"5DC612EA0303"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$1"
+			quid       	"5DC612EB01E3"
+			supplier   	"Logical View::Login"
+			quidu      	"5DC611560115"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$2"
+			quid       	"5DC612EB01E4"
+			supplier   	"Logical View::Admin"
+			quidu      	"5DC6112102C2"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$3"
+		quid       	"5DC612EE00DC"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$4"
+			quid       	"5DC612EF0013"
+			supplier   	"Logical View::View Donations"
+			quidu      	"5DC6115703D5"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$5"
+			quid       	"5DC612EF0014"
+			supplier   	"Logical View::Admin"
+			quidu      	"5DC6112102C2"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$6"
+		quid       	"5DC612F003B4"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$7"
+			quid       	"5DC612F3003B"
+			supplier   	"Logical View::view orphanage list"
+			quidu      	"5DC6115902E5"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$8"
+			quid       	"5DC612F3003C"
+			supplier   	"Logical View::Admin"
+			quidu      	"5DC6112102C2"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$9"
+		quid       	"5DC612F50214"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$10"
+			quid       	"5DC612F60293"
+			supplier   	"Logical View::View Donor/hostels list"
+			quidu      	"5DC6115B01BD"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$11"
+			quid       	"5DC612F60294"
+			supplier   	"Logical View::Admin"
+			quidu      	"5DC6112102C2"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$12"
+		quid       	"5DC613020042"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$13"
+			quid       	"5DC613040132"
+			supplier   	"Logical View::logout"
+			quidu      	"5DC612FB0022"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$14"
+			quid       	"5DC613040133"
+			supplier   	"Logical View::Admin"
+			quidu      	"5DC6112102C2"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$15"
+		quid       	"5DC6138E0302"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$16"
+			quid       	"5DC6138F01CA"
+			supplier   	"Logical View::login"
+			quidu      	"5DC61364007C"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$17"
+			quid       	"5DC6138F01CB"
+			supplier   	"Logical View::Hostel/Donor"
+			quidu      	"5DC613190238"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$18"
+		quid       	"5DC61392000B"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$19"
+			quid       	"5DC61392022A"
+			supplier   	"Logical View::View Donated"
+			quidu      	"5DC6134D01C5"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$20"
+			quid       	"5DC61392022B"
+			supplier   	"Logical View::Hostel/Donor"
+			quidu      	"5DC613190238"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$21"
+		quid       	"5DC613940263"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$22"
+			quid       	"5DC61396021A"
+			supplier   	"Logical View::Add food"
+			quidu      	"5DC613790042"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$23"
+			quid       	"5DC61396021B"
+			supplier   	"Logical View::Hostel/Donor"
+			quidu      	"5DC613190238"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$24"
+		quid       	"5DC613CC021E"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$25"
+			quid       	"5DC613CD0376"
+			supplier   	"Logical View::Logout"
+			quidu      	"5DC613B50187"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$26"
+			quid       	"5DC613CD0377"
+			supplier   	"Logical View::Hostel/Donor"
+			quidu      	"5DC613190238"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$27"
+		quid       	"5DC6144400A7"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$28"
+			quid       	"5DC614450068"
+			supplier   	"Logical View::Register"
+			quidu      	"5DC614200359"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$29"
+			quid       	"5DC614450069"
+			supplier   	"Logical View::Hostel/Donor"
+			quidu      	"5DC613190238"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$30"
+		quid       	"5DC614AB016B"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$31"
+			quid       	"5DC614AC0042"
+			supplier   	"Logical View::Register"
+			quidu      	"5DC614200359"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$32"
+			quid       	"5DC614AC0043"
+			supplier   	"Logical View::Orphanage"
+			quidu      	"5DC613E10295"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$33"
+		quid       	"5DC614AF0182"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$34"
+			quid       	"5DC614B000F9"
+			supplier   	"Logical View::Login"
+			quidu      	"5DC611560115"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$35"
+			quid       	"5DC614B000FA"
+			supplier   	"Logical View::Orphanage"
+			quidu      	"5DC613E10295"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$36"
+		quid       	"5DC614B30183"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$37"
+			quid       	"5DC614B40131"
+			supplier   	"Logical View::View  food"
+			quidu      	"5DC6145803B6"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$38"
+			quid       	"5DC614B40132"
+			supplier   	"Logical View::Orphanage"
+			quidu      	"5DC613E10295"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$39"
+		quid       	"5DC614B7001B"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$40"
+			quid       	"5DC614B703B1"
+			supplier   	"Logical View::Accept Food"
+			quidu      	"5DC61462022D"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$41"
+			quid       	"5DC614B703B2"
+			supplier   	"Logical View::Orphanage"
+			quidu      	"5DC613E10295"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$42"
+		quid       	"5DC614BA02A3"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$43"
+			quid       	"5DC614BB0301"
+			supplier   	"Logical View::Logout"
+			quidu      	"5DC613B50187"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$44"
+			quid       	"5DC614BB0302"
+			supplier   	"Logical View::Orphanage"
+			quidu      	"5DC613E10295"
+			is_navigable 	TRUE))))
+	logical_presentations 	(list unit_reference_list
+	    (object ClassDiagram "Main"
+		quid       	"5DC6111200E1"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object UseCaseView "Logical View::Login" @49
+			location   	(752, 336)
+			label      	(object ItemLabel
+			    Parent_View 	@49
+			    location   	(752, 474)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"Login")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DC611560115"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Logical View::View Donations" @50
+			location   	(896, 592)
+			label      	(object ItemLabel
+			    Parent_View 	@50
+			    location   	(896, 730)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"View Donations")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DC6115703D5"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Logical View::view orphanage list" @51
+			location   	(1040, 928)
+			label      	(object ItemLabel
+			    Parent_View 	@51
+			    location   	(1040, 1066)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"view orphanage list")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DC6115902E5"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Logical View::View Donor/hostels list" @52
+			location   	(928, 1216)
+			label      	(object ItemLabel
+			    Parent_View 	@52
+			    location   	(928, 1354)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"View Donor/hostels list")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DC6115B01BD"
+			height     	118
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::Admin" @53
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(192, 752)
+			label      	(object ItemLabel
+			    Parent_View 	@53
+			    location   	(192, 912)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	327
+			    justify    	0
+			    label      	"Admin")
+			icon       	"Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DC6112102C2"
+			annotation 	8
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$0" @54
+			location   	(459, 548)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DC612EA0303"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$1" @55
+				Parent_View 	@54
+				location   	(-261, -252)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DC612EB01E3"
+				client     	@54
+				supplier   	@49
+				line_style 	0)
+			    (object RoleView "$UNNAMED$2" @56
+				Parent_View 	@54
+				location   	(-261, -252)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DC612EB01E4"
+				client     	@54
+				supplier   	@53
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$3" @57
+			location   	(517, 675)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DC612EE00DC"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$4" @58
+				Parent_View 	@57
+				location   	(-203, -125)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DC612EF0013"
+				client     	@57
+				supplier   	@50
+				line_style 	0)
+			    (object RoleView "$UNNAMED$5" @59
+				Parent_View 	@57
+				location   	(-203, -125)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DC612EF0014"
+				client     	@57
+				supplier   	@53
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$6" @60
+			location   	(589, 832)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DC612F003B4"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$7" @61
+				Parent_View 	@60
+				location   	(-131, 32)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DC612F3003B"
+				client     	@60
+				supplier   	@51
+				line_style 	0)
+			    (object RoleView "$UNNAMED$8" @62
+				Parent_View 	@60
+				location   	(-131, 32)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DC612F3003C"
+				client     	@60
+				supplier   	@53
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$9" @63
+			location   	(542, 972)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DC612F50214"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$10" @64
+				Parent_View 	@63
+				location   	(-178, 172)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DC612F60293"
+				client     	@63
+				supplier   	@52
+				line_style 	0)
+			    (object RoleView "$UNNAMED$11" @65
+				Parent_View 	@63
+				location   	(-178, 172)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DC612F60294"
+				client     	@63
+				supplier   	@53
+				line_style 	0)))
+		    (object UseCaseView "Logical View::logout" @66
+			location   	(608, 1344)
+			label      	(object ItemLabel
+			    Parent_View 	@66
+			    location   	(608, 1482)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"logout")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DC612FB0022"
+			height     	118
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$12" @67
+			location   	(410, 1064)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DC613020042"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$13" @68
+				Parent_View 	@67
+				location   	(-310, 264)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DC613040132"
+				client     	@67
+				supplier   	@66
+				line_style 	0)
+			    (object RoleView "$UNNAMED$14" @69
+				Parent_View 	@67
+				location   	(-310, 264)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DC613040133"
+				client     	@67
+				supplier   	@53
+				line_style 	0)))
+		    (object UseCaseView "Logical View::login" @70
+			location   	(2416, 144)
+			label      	(object ItemLabel
+			    Parent_View 	@70
+			    location   	(2416, 282)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"login")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DC61364007C"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Logical View::View Donated" @71
+			location   	(2544, 352)
+			label      	(object ItemLabel
+			    Parent_View 	@71
+			    location   	(2544, 490)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"View Donated")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DC6134D01C5"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Logical View::Add food" @72
+			location   	(2528, 640)
+			label      	(object ItemLabel
+			    Parent_View 	@72
+			    location   	(2528, 778)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"Add food")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DC613790042"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Logical View::Logout" @73
+			location   	(2352, 832)
+			label      	(object ItemLabel
+			    Parent_View 	@73
+			    location   	(2352, 970)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"Logout")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DC613B50187"
+			height     	118
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::Hostel/Donor" @74
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(1376, 528)
+			label      	(object ItemLabel
+			    Parent_View 	@74
+			    location   	(1376, 688)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	327
+			    justify    	0
+			    label      	"Hostel/Donor")
+			icon       	"Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DC613190238"
+			annotation 	8
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$15" @75
+			location   	(1869, 343)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DC6138E0302"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$16" @76
+				Parent_View 	@75
+				location   	(365, -281)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DC6138F01CA"
+				client     	@75
+				supplier   	@70
+				line_style 	0)
+			    (object RoleView "$UNNAMED$17" @77
+				Parent_View 	@75
+				location   	(365, -281)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DC6138F01CB"
+				client     	@75
+				supplier   	@74
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$18" @78
+			location   	(1932, 441)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DC61392000B"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$19" @79
+				Parent_View 	@78
+				location   	(428, -183)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DC61392022A"
+				client     	@78
+				supplier   	@71
+				line_style 	0)
+			    (object RoleView "$UNNAMED$20" @80
+				Parent_View 	@78
+				location   	(428, -183)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DC61392022B"
+				client     	@78
+				supplier   	@74
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$21" @81
+			location   	(1924, 578)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DC613940263"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$22" @82
+				Parent_View 	@81
+				location   	(420, -46)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DC61396021A"
+				client     	@81
+				supplier   	@72
+				line_style 	0)
+			    (object RoleView "$UNNAMED$23" @83
+				Parent_View 	@81
+				location   	(420, -46)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DC61396021B"
+				client     	@81
+				supplier   	@74
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$24" @84
+			location   	(1837, 669)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DC613CC021E"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$25" @85
+				Parent_View 	@84
+				location   	(333, 45)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DC613CD0376"
+				client     	@84
+				supplier   	@73
+				line_style 	0)
+			    (object RoleView "$UNNAMED$26" @86
+				Parent_View 	@84
+				location   	(333, 45)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DC613CD0377"
+				client     	@84
+				supplier   	@74
+				line_style 	0)))
+		    (object UseCaseView "Logical View::Register" @87
+			location   	(2048, 64)
+			label      	(object ItemLabel
+			    Parent_View 	@87
+			    location   	(2048, 202)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"Register")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DC614200359"
+			height     	118
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$27" @88
+			location   	(1696, 302)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DC6144400A7"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$28" @89
+				Parent_View 	@88
+				location   	(320, -226)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DC614450068"
+				client     	@88
+				supplier   	@87
+				line_style 	0)
+			    (object RoleView "$UNNAMED$29" @90
+				Parent_View 	@88
+				location   	(320, -226)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DC614450069"
+				client     	@88
+				supplier   	@74
+				line_style 	0)))
+		    (object UseCaseView "Logical View::Register" @91
+			location   	(1872, 944)
+			label      	(object ItemLabel
+			    Parent_View 	@91
+			    location   	(1872, 1082)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"Register")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DC614200359"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Logical View::Login" @92
+			location   	(2080, 1152)
+			label      	(object ItemLabel
+			    Parent_View 	@92
+			    location   	(2080, 1290)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"Login")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DC611560115"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Logical View::View  food" @93
+			location   	(2128, 1376)
+			label      	(object ItemLabel
+			    Parent_View 	@93
+			    location   	(2128, 1514)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"View  food")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DC6145803B6"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Logical View::Accept Food" @94
+			location   	(2064, 1616)
+			label      	(object ItemLabel
+			    Parent_View 	@94
+			    location   	(2064, 1754)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"Accept Food")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DC61462022D"
+			height     	118
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::Orphanage" @95
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(1392, 1232)
+			label      	(object ItemLabel
+			    Parent_View 	@95
+			    location   	(1392, 1392)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	327
+			    justify    	0
+			    label      	"Orphanage")
+			icon       	"Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DC613E10295"
+			annotation 	8
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$30" @96
+			location   	(1611, 1098)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DC614AB016B"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$31" @97
+				Parent_View 	@96
+				location   	(219, -134)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DC614AC0042"
+				client     	@96
+				supplier   	@91
+				line_style 	0)
+			    (object RoleView "$UNNAMED$32" @98
+				Parent_View 	@96
+				location   	(219, -134)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DC614AC0043"
+				client     	@96
+				supplier   	@95
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$33" @99
+			location   	(1708, 1192)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DC614AF0182"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$34" @100
+				Parent_View 	@99
+				location   	(316, -40)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DC614B000F9"
+				client     	@99
+				supplier   	@92
+				line_style 	0)
+			    (object RoleView "$UNNAMED$35" @101
+				Parent_View 	@99
+				location   	(316, -40)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DC614B000FA"
+				client     	@99
+				supplier   	@95
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$36" @102
+			location   	(1732, 1296)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DC614B30183"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$37" @103
+				Parent_View 	@102
+				location   	(340, 64)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DC614B40131"
+				client     	@102
+				supplier   	@93
+				line_style 	0)
+			    (object RoleView "$UNNAMED$38" @104
+				Parent_View 	@102
+				location   	(340, 64)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DC614B40132"
+				client     	@102
+				supplier   	@95
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$39" @105
+			location   	(1708, 1410)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DC614B7001B"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$40" @106
+				Parent_View 	@105
+				location   	(316, 178)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DC614B703B1"
+				client     	@105
+				supplier   	@94
+				line_style 	0)
+			    (object RoleView "$UNNAMED$41" @107
+				Parent_View 	@105
+				location   	(316, 178)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DC614B703B2"
+				client     	@105
+				supplier   	@95
+				line_style 	0)))
+		    (object UseCaseView "Logical View::Logout" @108
+			location   	(1760, 1696)
+			label      	(object ItemLabel
+			    Parent_View 	@108
+			    location   	(1760, 1834)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"Logout")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DC613B50187"
+			height     	118
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$42" @109
+			location   	(1607, 1504)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DC614BA02A3"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$43" @110
+				Parent_View 	@109
+				location   	(215, 272)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DC614BB0301"
+				client     	@109
+				supplier   	@108
+				line_style 	0)
+			    (object RoleView "$UNNAMED$44" @111
+				Parent_View 	@109
+				location   	(215, 272)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DC614BB0302"
+				client     	@109
+				supplier   	@95
+				line_style 	0)))))))
+    root_subsystem 	(object SubSystem "Component View"
+	quid       	"5DC611110374"
+	physical_models 	(list unit_reference_list)
+	physical_presentations 	(list unit_reference_list
+	    (object Module_Diagram "Main"
+		quid       	"5DC6111200DC"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    process_structure 	(object Processes
+	quid       	"5DC611110375"
+	ProcsNDevs 	(list
+	    (object Process_Diagram "Deployment View"
+		quid       	"5DC611110377"
+		title      	"Deployment View"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    properties 	(object Properties
+	quid       	"5DC611110376"))

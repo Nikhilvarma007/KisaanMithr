@@ -1,0 +1,1724 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8054a"
+    charSet    	0)
+
+(object Design "Logical View"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    defaults   	(object defaults
+	rightMargin 	0.250000
+	leftMargin 	0.250000
+	topMargin  	0.250000
+	bottomMargin 	0.500000
+	pageOverlap 	0.250000
+	clipIconLabels 	TRUE
+	autoResize 	TRUE
+	snapToGrid 	TRUE
+	gridX      	16
+	gridY      	16
+	defaultFont 	(object Font
+	    size       	10
+	    face       	"Arial"
+	    bold       	FALSE
+	    italics    	FALSE
+	    underline  	FALSE
+	    strike     	FALSE
+	    color      	0
+	    default_color 	TRUE)
+	showMessageNum 	1
+	showClassOfObject 	TRUE
+	notation   	"Unified")
+    root_usecase_package 	(object Class_Category "Use Case View"
+	quid       	"5DCA0C09023C"
+	exportControl 	"Public"
+	global     	TRUE
+	logical_models 	(list unit_reference_list
+	    (object Class_Category "NewPackage"
+		quid       	"5DCB5D7D0050"
+		exportControl 	"Public"
+		logical_models 	(list unit_reference_list)
+		logical_presentations 	(list unit_reference_list))
+	    (object Mechanism @1
+		logical_models 	(list unit_reference_list
+		    (object Object "$UNNAMED$0"
+			quid       	"5DCB5D8800F9"
+			persistence 	"Transient"
+			multi      	FALSE))))
+	logical_presentations 	(list unit_reference_list
+	    (object UseCaseDiagram "Main"
+		quid       	"5DCA0C090294"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))
+	    (object UseCaseDiagram "NewDiagram"
+		quid       	"5DCB5D790124"
+		title      	"NewDiagram"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object NoteView @2
+			location   	(704, 448)
+			line_color 	3342489
+			fill_color 	12058623
+			width      	300
+			height     	132)
+		    (object CategoryView "Use Case View::NewPackage" @3
+			location   	(1920, 752)
+			label      	(object ItemLabel
+			    Parent_View 	@3
+			    location   	(1776, 668)
+			    fill_color 	12058623
+			    nlines     	2
+			    max_width  	288
+			    justify    	0
+			    label      	"NewPackage")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DCB5D7D0050"
+			width      	300
+			height     	180)))
+	    (object InteractionDiagram "NewDiagram2"
+		mechanism_ref 	@1
+		quid       	"5DCB5D850167"
+		title      	"NewDiagram2"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object InterObjView "$UNNAMED$0" @4
+			location   	(448, 224)
+			font       	(object Font
+			    underline  	TRUE)
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DCB5D8800F9"
+			width      	300
+			height     	120
+			icon_height 	0
+			icon_width 	0
+			annotation 	1)))))
+    root_category 	(object Class_Category "Logical View"
+	quid       	"5DCA0C09023B"
+	exportControl 	"Public"
+	global     	TRUE
+	subsystem  	"Component View"
+	quidu      	"5DCA0C09023D"
+	logical_models 	(list unit_reference_list
+	    (object Class "Admin"
+		quid       	"5DCA0C2400A9"
+		stereotype 	"Actor")
+	    (object Class "Staff"
+		quid       	"5DCA0E340190"
+		stereotype 	"Actor")
+	    (object Class "HOD"
+		quid       	"5DCA1030035E"
+		stereotype 	"Actor")
+	    (object Class "Parent"
+		quid       	"5DCA11BE039F"
+		stereotype 	"Actor")
+	    (object Class "NewClass"
+		quid       	"5DCB5F8B0356")
+	    (object UseCase "Logout"
+		quid       	"5DCA0C4001DB")
+	    (object UseCase "Add Staff"
+		quid       	"5DCA0C42022B")
+	    (object UseCase "Add Student and Parent details"
+		quid       	"5DCA0C44011C")
+	    (object UseCase "Add HOD"
+		quid       	"5DCA0C4503E3")
+	    (object UseCase "View notifications"
+		quid       	"5DCA0CCD0231")
+	    (object UseCase "Delete Notifications"
+		quid       	"5DCA0D2801E5")
+	    (object UseCase "Login"
+		quid       	"5DCA0E4F01EA")
+	    (object UseCase "Post notifications"
+		quid       	"5DCA0E710113")
+	    (object UseCase "View Queries"
+		quid       	"5DCA0E9B0004")
+	    (object UseCase "Reply for queries"
+		quid       	"5DCA0EC80227")
+	    (object UseCase "Add Marks"
+		quid       	"5DCA0EF80370")
+	    (object UseCase "Add Attendance"
+		quid       	"5DCA0F2A016B")
+	    (object UseCase "NewUseCase"
+		quid       	"5DCA103A032E")
+	    (object UseCase "Add Notifications"
+		quid       	"5DCA103C02AE")
+	    (object UseCase "View Notifications"
+		quid       	"5DCA103F010E")
+	    (object UseCase "Delete notifications"
+		quid       	"5DCA10B7011C")
+	    (object UseCase "View Results"
+		quid       	"5DCB09940192")
+	    (object UseCase "View Attendance"
+		quid       	"5DCB09B10023")
+	    (object UseCase "Post Queries"
+		quid       	"5DCB09BE014C")
+	    (object UseCase "View Fee due"
+		quid       	"5DCB0A370091")
+	    (object Association "$UNNAMED$1"
+		quid       	"5DCA0CAC02B8"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$2"
+			quid       	"5DCA0CAD03E2"
+			supplier   	"Logical View::Logout"
+			quidu      	"5DCA0C4001DB"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$3"
+			quid       	"5DCA0CAD03E3"
+			supplier   	"Logical View::Admin"
+			quidu      	"5DCA0C2400A9"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$4"
+		quid       	"5DCA0CB000A0"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$5"
+			quid       	"5DCA0CB100B8"
+			supplier   	"Logical View::Add Staff"
+			quidu      	"5DCA0C42022B"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$6"
+			quid       	"5DCA0CB100B9"
+			supplier   	"Logical View::Admin"
+			quidu      	"5DCA0C2400A9"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$7"
+		quid       	"5DCA0CB300A2"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$8"
+			quid       	"5DCA0CB402E0"
+			supplier   	"Logical View::Add Student and Parent details"
+			quidu      	"5DCA0C44011C"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$9"
+			quid       	"5DCA0CB402E1"
+			supplier   	"Logical View::Admin"
+			quidu      	"5DCA0C2400A9"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$10"
+		quid       	"5DCA0CB603D9"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$11"
+			quid       	"5DCA0CB703C8"
+			supplier   	"Logical View::Add HOD"
+			quidu      	"5DCA0C4503E3"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$12"
+			quid       	"5DCA0CB703C9"
+			supplier   	"Logical View::Admin"
+			quidu      	"5DCA0C2400A9"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$13"
+		quid       	"5DCA0D20007C"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$14"
+			quid       	"5DCA0D23025D"
+			supplier   	"Logical View::View notifications"
+			quidu      	"5DCA0CCD0231"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$15"
+			quid       	"5DCA0D23025E"
+			supplier   	"Logical View::Admin"
+			quidu      	"5DCA0C2400A9"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$16"
+		quid       	"5DCA0D2B01FE"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$17"
+			quid       	"5DCA0D2D0075"
+			supplier   	"Logical View::Delete Notifications"
+			quidu      	"5DCA0D2801E5"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$18"
+			quid       	"5DCA0D2D0076"
+			supplier   	"Logical View::Admin"
+			quidu      	"5DCA0C2400A9"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$19"
+		quid       	"5DCA0D7D0220"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$20"
+			quid       	"5DCA0D7F0322"
+			supplier   	"Logical View::Logout"
+			quidu      	"5DCA0C4001DB"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$21"
+			quid       	"5DCA0D7F0323"
+			supplier   	"Logical View::Admin"
+			quidu      	"5DCA0C2400A9"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$22"
+		quid       	"5DCA0F8003DE"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$23"
+			quid       	"5DCA0F8200F7"
+			supplier   	"Logical View::Login"
+			quidu      	"5DCA0E4F01EA"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$24"
+			quid       	"5DCA0F8200F8"
+			supplier   	"Logical View::Staff"
+			quidu      	"5DCA0E340190"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$25"
+		quid       	"5DCA0F8402C0"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$26"
+			quid       	"5DCA0F860058"
+			supplier   	"Logical View::Post notifications"
+			quidu      	"5DCA0E710113"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$27"
+			quid       	"5DCA0F860059"
+			supplier   	"Logical View::Staff"
+			quidu      	"5DCA0E340190"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$28"
+		quid       	"5DCA0F8801D9"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$29"
+			quid       	"5DCA0F8902FF"
+			supplier   	"Logical View::View Queries"
+			quidu      	"5DCA0E9B0004"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$30"
+			quid       	"5DCA0F890300"
+			supplier   	"Logical View::Staff"
+			quidu      	"5DCA0E340190"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$31"
+		quid       	"5DCA0F8C0109"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$32"
+			quid       	"5DCA0F8D0117"
+			supplier   	"Logical View::Reply for queries"
+			quidu      	"5DCA0EC80227"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$33"
+			quid       	"5DCA0F8D0118"
+			supplier   	"Logical View::Staff"
+			quidu      	"5DCA0E340190"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$34"
+		quid       	"5DCA0F8F0131"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$35"
+			quid       	"5DCA0F920080"
+			supplier   	"Logical View::Add Marks"
+			quidu      	"5DCA0EF80370"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$36"
+			quid       	"5DCA0F920081"
+			supplier   	"Logical View::Staff"
+			quidu      	"5DCA0E340190"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$37"
+		quid       	"5DCA0F9600B9"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$38"
+			quid       	"5DCA0F980121"
+			supplier   	"Logical View::Add Attendance"
+			quidu      	"5DCA0F2A016B"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$39"
+			quid       	"5DCA0F980122"
+			supplier   	"Logical View::Staff"
+			quidu      	"5DCA0E340190"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$40"
+		quid       	"5DCA0F9B0022"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$41"
+			quid       	"5DCA0F9C0399"
+			supplier   	"Logical View::Logout"
+			quidu      	"5DCA0C4001DB"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$42"
+			quid       	"5DCA0F9C039A"
+			supplier   	"Logical View::Staff"
+			quidu      	"5DCA0E340190"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$43"
+		quid       	"5DCA105B0310"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$44"
+			quid       	"5DCA105C0200"
+			supplier   	"Logical View::Login"
+			quidu      	"5DCA0E4F01EA"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$45"
+			quid       	"5DCA105C0201"
+			supplier   	"Logical View::HOD"
+			quidu      	"5DCA1030035E"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$46"
+		quid       	"5DCA10710048"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$47"
+			quid       	"5DCA10730242"
+			supplier   	"Logical View::View Notifications"
+			quidu      	"5DCA103F010E"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$48"
+			quid       	"5DCA10730243"
+			supplier   	"Logical View::HOD"
+			quidu      	"5DCA1030035E"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$49"
+		quid       	"5DCA10C502BC"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$50"
+			quid       	"5DCA10C601FC"
+			supplier   	"Logical View::Add Notifications"
+			quidu      	"5DCA103C02AE"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$51"
+			quid       	"5DCA10C601FD"
+			supplier   	"Logical View::HOD"
+			quidu      	"5DCA1030035E"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$52"
+		quid       	"5DCA10DA0067"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$53"
+			quid       	"5DCA10DA03B6"
+			supplier   	"Logical View::Delete notifications"
+			quidu      	"5DCA10B7011C"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$54"
+			quid       	"5DCA10DA03B7"
+			supplier   	"Logical View::HOD"
+			quidu      	"5DCA1030035E"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$55"
+		quid       	"5DCA110C01F7"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$56"
+			quid       	"5DCA110D0249"
+			supplier   	"Logical View::View Queries"
+			quidu      	"5DCA0E9B0004"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$57"
+			quid       	"5DCA110D024A"
+			supplier   	"Logical View::HOD"
+			quidu      	"5DCA1030035E"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$58"
+		quid       	"5DCA11110151"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$59"
+			quid       	"5DCA111202C9"
+			supplier   	"Logical View::Logout"
+			quidu      	"5DCA0C4001DB"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$60"
+			quid       	"5DCA111202CA"
+			supplier   	"Logical View::HOD"
+			quidu      	"5DCA1030035E"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$61"
+		quid       	"5DCB5C9F0186"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$62"
+			quid       	"5DCB5CA00117"
+			supplier   	"Logical View::Login"
+			quidu      	"5DCA0E4F01EA"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$63"
+			quid       	"5DCB5CA00118"
+			supplier   	"Logical View::Parent"
+			quidu      	"5DCA11BE039F"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$64"
+		quid       	"5DCB5CA20322"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$65"
+			quid       	"5DCB5CA30290"
+			supplier   	"Logical View::View Results"
+			quidu      	"5DCB09940192"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$66"
+			quid       	"5DCB5CA30291"
+			supplier   	"Logical View::Parent"
+			quidu      	"5DCA11BE039F"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$67"
+		quid       	"5DCB5CA60091"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$68"
+			quid       	"5DCB5CA603D9"
+			supplier   	"Logical View::View Attendance"
+			quidu      	"5DCB09B10023"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$69"
+			quid       	"5DCB5CA603DA"
+			supplier   	"Logical View::Parent"
+			quidu      	"5DCA11BE039F"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$70"
+		quid       	"5DCB5CAA0020"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$71"
+			quid       	"5DCB5CAB0170"
+			supplier   	"Logical View::Post Queries"
+			quidu      	"5DCB09BE014C"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$72"
+			quid       	"5DCB5CAB0171"
+			supplier   	"Logical View::Parent"
+			quidu      	"5DCA11BE039F"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$73"
+		quid       	"5DCB5CAD035A"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$74"
+			quid       	"5DCB5CAF0018"
+			supplier   	"Logical View::View Fee due"
+			quidu      	"5DCB0A370091"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$75"
+			quid       	"5DCB5CAF0019"
+			supplier   	"Logical View::Parent"
+			quidu      	"5DCA11BE039F"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$76"
+		quid       	"5DCB5CB10342"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$77"
+			quid       	"5DCB5CB203B0"
+			supplier   	"Logical View::View Notifications"
+			quidu      	"5DCA103F010E"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$78"
+			quid       	"5DCB5CB203B1"
+			supplier   	"Logical View::Parent"
+			quidu      	"5DCA11BE039F"
+			is_navigable 	TRUE))))
+	logical_presentations 	(list unit_reference_list
+	    (object ClassDiagram "Main"
+		quid       	"5DCA0C090298"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	2397
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object UseCaseView "Logical View::Logout" @5
+			location   	(480, 240)
+			label      	(object ItemLabel
+			    Parent_View 	@5
+			    location   	(480, 378)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Logout")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DCA0C4001DB"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Logical View::Add Staff" @6
+			location   	(704, 432)
+			label      	(object ItemLabel
+			    Parent_View 	@6
+			    location   	(704, 570)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Add Staff")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DCA0C42022B"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Logical View::Add Student and Parent details" @7
+			location   	(736, 656)
+			label      	(object ItemLabel
+			    Parent_View 	@7
+			    location   	(736, 794)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Add Student and Parent details")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DCA0C44011C"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Logical View::Add HOD" @8
+			location   	(896, 880)
+			label      	(object ItemLabel
+			    Parent_View 	@8
+			    location   	(896, 1018)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Add HOD")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DCA0C4503E3"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Logical View::View notifications" @9
+			location   	(832, 1120)
+			label      	(object ItemLabel
+			    Parent_View 	@9
+			    location   	(832, 1258)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"View notifications")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DCA0CCD0231"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Logical View::Delete Notifications" @10
+			location   	(576, 1248)
+			label      	(object ItemLabel
+			    Parent_View 	@10
+			    location   	(576, 1386)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Delete Notifications")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DCA0D2801E5"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Logical View::Logout" @11
+			location   	(384, 1488)
+			label      	(object ItemLabel
+			    Parent_View 	@11
+			    location   	(384, 1626)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Logout")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DCA0C4001DB"
+			height     	118
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::Admin" @12
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(144, 704)
+			label      	(object ItemLabel
+			    Parent_View 	@12
+			    location   	(144, 864)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	325
+			    justify    	0
+			    label      	"Admin")
+			icon       	"Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DCA0C2400A9"
+			annotation 	8
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$1" @13
+			location   	(304, 475)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DCA0CAC02B8"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$2" @14
+				Parent_View 	@13
+				location   	(96, -245)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCA0CAD03E2"
+				client     	@13
+				supplier   	@5
+				line_style 	0)
+			    (object RoleView "$UNNAMED$3" @15
+				Parent_View 	@13
+				location   	(96, -245)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCA0CAD03E3"
+				client     	@13
+				supplier   	@12
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$4" @16
+			location   	(397, 576)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DCA0CB000A0"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$5" @17
+				Parent_View 	@16
+				location   	(189, -144)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCA0CB100B8"
+				client     	@16
+				supplier   	@6
+				line_style 	0)
+			    (object RoleView "$UNNAMED$6" @18
+				Parent_View 	@16
+				location   	(189, -144)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCA0CB100B9"
+				client     	@16
+				supplier   	@12
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$7" @19
+			location   	(413, 679)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DCA0CB300A2"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$8" @20
+				Parent_View 	@19
+				location   	(205, -41)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCA0CB402E0"
+				client     	@19
+				supplier   	@7
+				line_style 	0)
+			    (object RoleView "$UNNAMED$9" @21
+				Parent_View 	@19
+				location   	(205, -41)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCA0CB402E1"
+				client     	@19
+				supplier   	@12
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$10" @22
+			location   	(493, 783)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DCA0CB603D9"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$11" @23
+				Parent_View 	@22
+				location   	(285, 63)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCA0CB703C8"
+				client     	@22
+				supplier   	@8
+				line_style 	0)
+			    (object RoleView "$UNNAMED$12" @24
+				Parent_View 	@22
+				location   	(285, 63)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCA0CB703C9"
+				client     	@22
+				supplier   	@12
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$13" @25
+			location   	(469, 898)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DCA0D20007C"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$14" @26
+				Parent_View 	@25
+				location   	(261, 178)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCA0D23025D"
+				client     	@25
+				supplier   	@9
+				line_style 	0)
+			    (object RoleView "$UNNAMED$15" @27
+				Parent_View 	@25
+				location   	(261, 178)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCA0D23025E"
+				client     	@25
+				supplier   	@12
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$16" @28
+			location   	(368, 987)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DCA0D2B01FE"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$17" @29
+				Parent_View 	@28
+				location   	(160, 267)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCA0D2D0075"
+				client     	@28
+				supplier   	@10
+				line_style 	0)
+			    (object RoleView "$UNNAMED$18" @30
+				Parent_View 	@28
+				location   	(160, 267)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCA0D2D0076"
+				client     	@28
+				supplier   	@12
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$19" @31
+			location   	(281, 1158)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DCA0D7D0220"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$20" @32
+				Parent_View 	@31
+				location   	(73, 438)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCA0D7F0322"
+				client     	@31
+				supplier   	@11
+				line_style 	0)
+			    (object RoleView "$UNNAMED$21" @33
+				Parent_View 	@31
+				location   	(73, 438)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCA0D7F0323"
+				client     	@31
+				supplier   	@12
+				line_style 	0)))
+		    (object UseCaseView "Logical View::Login" @34
+			location   	(1776, 64)
+			label      	(object ItemLabel
+			    Parent_View 	@34
+			    location   	(1776, 202)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Login")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DCA0E4F01EA"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Logical View::Post notifications" @35
+			location   	(2048, 208)
+			label      	(object ItemLabel
+			    Parent_View 	@35
+			    location   	(2048, 346)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Post notifications")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DCA0E710113"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Logical View::View Queries" @36
+			location   	(2176, 448)
+			label      	(object ItemLabel
+			    Parent_View 	@36
+			    location   	(2176, 586)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"View Queries")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DCA0E9B0004"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Logical View::Reply for queries" @37
+			location   	(2272, 656)
+			label      	(object ItemLabel
+			    Parent_View 	@37
+			    location   	(2272, 794)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Reply for queries")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DCA0EC80227"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Logical View::Add Marks" @38
+			location   	(2192, 896)
+			label      	(object ItemLabel
+			    Parent_View 	@38
+			    location   	(2192, 1034)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Add Marks")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DCA0EF80370"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Logical View::Add Attendance" @39
+			location   	(1920, 1008)
+			label      	(object ItemLabel
+			    Parent_View 	@39
+			    location   	(1920, 1146)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Add Attendance")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DCA0F2A016B"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Logical View::Logout" @40
+			location   	(1648, 896)
+			label      	(object ItemLabel
+			    Parent_View 	@40
+			    location   	(1648, 1034)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Logout")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DCA0C4001DB"
+			height     	118
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::Staff" @41
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(1120, 384)
+			label      	(object ItemLabel
+			    Parent_View 	@41
+			    location   	(1120, 544)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	325
+			    justify    	0
+			    label      	"Staff")
+			icon       	"Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DCA0E340190"
+			annotation 	8
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$22" @42
+			location   	(1420, 233)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DCA0F8003DE"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$23" @43
+				Parent_View 	@42
+				location   	(-516, -583)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCA0F8200F7"
+				client     	@42
+				supplier   	@34
+				line_style 	0)
+			    (object RoleView "$UNNAMED$24" @44
+				Parent_View 	@42
+				location   	(-516, -583)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCA0F8200F8"
+				client     	@42
+				supplier   	@41
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$25" @45
+			location   	(1557, 297)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DCA0F8402C0"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$26" @46
+				Parent_View 	@45
+				location   	(-379, -519)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCA0F860058"
+				client     	@45
+				supplier   	@35
+				line_style 	0)
+			    (object RoleView "$UNNAMED$27" @47
+				Parent_View 	@45
+				location   	(-379, -519)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCA0F860059"
+				client     	@45
+				supplier   	@41
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$28" @48
+			location   	(1621, 411)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DCA0F8801D9"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$29" @49
+				Parent_View 	@48
+				location   	(-315, -405)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCA0F8902FF"
+				client     	@48
+				supplier   	@36
+				line_style 	0)
+			    (object RoleView "$UNNAMED$30" @50
+				Parent_View 	@48
+				location   	(-315, -405)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCA0F890300"
+				client     	@48
+				supplier   	@41
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$31" @51
+			location   	(1668, 511)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DCA0F8C0109"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$32" @52
+				Parent_View 	@51
+				location   	(-268, -305)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCA0F8D0117"
+				client     	@51
+				supplier   	@37
+				line_style 	0)
+			    (object RoleView "$UNNAMED$33" @53
+				Parent_View 	@51
+				location   	(-268, -305)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCA0F8D0118"
+				client     	@51
+				supplier   	@41
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$34" @54
+			location   	(1629, 625)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DCA0F8F0131"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$35" @55
+				Parent_View 	@54
+				location   	(-307, -191)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCA0F920080"
+				client     	@54
+				supplier   	@38
+				line_style 	0)
+			    (object RoleView "$UNNAMED$36" @56
+				Parent_View 	@54
+				location   	(-307, -191)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCA0F920081"
+				client     	@54
+				supplier   	@41
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$37" @57
+			location   	(1510, 688)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DCA0F9600B9"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$38" @58
+				Parent_View 	@57
+				location   	(-426, -128)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCA0F980121"
+				client     	@57
+				supplier   	@39
+				line_style 	0)
+			    (object RoleView "$UNNAMED$39" @59
+				Parent_View 	@57
+				location   	(-426, -128)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCA0F980122"
+				client     	@57
+				supplier   	@41
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$40" @60
+			location   	(1382, 638)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DCA0F9B0022"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$41" @61
+				Parent_View 	@60
+				location   	(-554, -178)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCA0F9C0399"
+				client     	@60
+				supplier   	@40
+				line_style 	0)
+			    (object RoleView "$UNNAMED$42" @62
+				Parent_View 	@60
+				location   	(-554, -178)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCA0F9C039A"
+				client     	@60
+				supplier   	@41
+				line_style 	0)))
+		    (object UseCaseView "Logical View::Login" @63
+			location   	(3584, 224)
+			label      	(object ItemLabel
+			    Parent_View 	@63
+			    location   	(3584, 362)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Login")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DCA0E4F01EA"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Logical View::View Notifications" @64
+			location   	(3632, 768)
+			label      	(object ItemLabel
+			    Parent_View 	@64
+			    location   	(3632, 906)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"View Notifications")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DCA103F010E"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Logical View::Add Notifications" @65
+			location   	(3616, 480)
+			label      	(object ItemLabel
+			    Parent_View 	@65
+			    location   	(3616, 618)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Add Notifications")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DCA103C02AE"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Logical View::Delete notifications" @66
+			location   	(3648, 1040)
+			label      	(object ItemLabel
+			    Parent_View 	@66
+			    location   	(3648, 1178)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Delete notifications")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DCA10B7011C"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Logical View::View Queries" @67
+			location   	(3664, 1344)
+			label      	(object ItemLabel
+			    Parent_View 	@67
+			    location   	(3664, 1482)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"View Queries")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DCA0E9B0004"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Logical View::Logout" @68
+			location   	(3664, 1664)
+			label      	(object ItemLabel
+			    Parent_View 	@68
+			    location   	(3664, 1802)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Logout")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DCA0C4001DB"
+			height     	118
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::HOD" @69
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(2960, 944)
+			label      	(object ItemLabel
+			    Parent_View 	@69
+			    location   	(2960, 1104)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	325
+			    justify    	0
+			    label      	"HOD")
+			icon       	"Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DCA1030035E"
+			annotation 	8
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$43" @70
+			location   	(3272, 577)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DCA105B0310"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$44" @71
+				Parent_View 	@70
+				location   	(296, -63)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCA105C0200"
+				client     	@70
+				supplier   	@63
+				line_style 	0)
+			    (object RoleView "$UNNAMED$45" @72
+				Parent_View 	@70
+				location   	(296, -63)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCA105C0201"
+				client     	@70
+				supplier   	@69
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$46" @73
+			location   	(3269, 860)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DCA10710048"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$47" @74
+				Parent_View 	@73
+				location   	(293, 220)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCA10730242"
+				client     	@73
+				supplier   	@64
+				line_style 	0)
+			    (object RoleView "$UNNAMED$48" @75
+				Parent_View 	@73
+				location   	(293, 220)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCA10730243"
+				client     	@73
+				supplier   	@69
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$49" @76
+			location   	(3238, 743)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DCA10C502BC"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$50" @77
+				Parent_View 	@76
+				location   	(262, 103)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCA10C601FC"
+				client     	@76
+				supplier   	@65
+				line_style 	0)
+			    (object RoleView "$UNNAMED$51" @78
+				Parent_View 	@76
+				location   	(262, 103)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCA10C601FD"
+				client     	@76
+				supplier   	@69
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$52" @79
+			location   	(3276, 986)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DCA10DA0067"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$53" @80
+				Parent_View 	@79
+				location   	(300, 346)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCA10DA03B6"
+				client     	@79
+				supplier   	@66
+				line_style 	0)
+			    (object RoleView "$UNNAMED$54" @81
+				Parent_View 	@79
+				location   	(300, 346)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCA10DA03B7"
+				client     	@79
+				supplier   	@69
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$55" @82
+			location   	(3290, 1130)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DCA110C01F7"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$56" @83
+				Parent_View 	@82
+				location   	(314, 490)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCA110D0249"
+				client     	@82
+				supplier   	@67
+				line_style 	0)
+			    (object RoleView "$UNNAMED$57" @84
+				Parent_View 	@82
+				location   	(314, 490)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCA110D024A"
+				client     	@82
+				supplier   	@69
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$58" @85
+			location   	(3312, 1304)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DCA11110151"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$59" @86
+				Parent_View 	@85
+				location   	(336, 664)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCA111202C9"
+				client     	@85
+				supplier   	@68
+				line_style 	0)
+			    (object RoleView "$UNNAMED$60" @87
+				Parent_View 	@85
+				location   	(336, 664)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCA111202CA"
+				client     	@85
+				supplier   	@69
+				line_style 	0)))
+		    (object UseCaseView "Logical View::Login" @88
+			location   	(4896, 304)
+			label      	(object ItemLabel
+			    Parent_View 	@88
+			    location   	(4896, 442)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Login")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DCA0E4F01EA"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Logical View::View Results" @89
+			location   	(4896, 576)
+			label      	(object ItemLabel
+			    Parent_View 	@89
+			    location   	(4896, 714)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"View Results")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DCB09940192"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Logical View::View Attendance" @90
+			location   	(4896, 816)
+			label      	(object ItemLabel
+			    Parent_View 	@90
+			    location   	(4896, 954)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"View Attendance")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DCB09B10023"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Logical View::Post Queries" @91
+			location   	(4928, 1056)
+			label      	(object ItemLabel
+			    Parent_View 	@91
+			    location   	(4928, 1194)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"Post Queries")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DCB09BE014C"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Logical View::View Fee due" @92
+			location   	(4928, 1280)
+			label      	(object ItemLabel
+			    Parent_View 	@92
+			    location   	(4928, 1418)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"View Fee due")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DCB0A370091"
+			height     	118
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::Parent" @93
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(4208, 960)
+			label      	(object ItemLabel
+			    Parent_View 	@93
+			    location   	(4208, 1120)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	325
+			    justify    	0
+			    label      	"Parent")
+			icon       	"Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DCA11BE039F"
+			annotation 	8
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$61" @94
+			location   	(4549, 630)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DCB5C9F0186"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$62" @95
+				Parent_View 	@94
+				location   	(341, -330)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCB5CA00117"
+				client     	@94
+				supplier   	@88
+				line_style 	0)
+			    (object RoleView "$UNNAMED$63" @96
+				Parent_View 	@94
+				location   	(341, -330)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCB5CA00118"
+				client     	@94
+				supplier   	@93
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$64" @97
+			location   	(4518, 784)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DCB5CA20322"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$65" @98
+				Parent_View 	@97
+				location   	(310, -176)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCB5CA30290"
+				client     	@97
+				supplier   	@89
+				line_style 	0)
+			    (object RoleView "$UNNAMED$66" @99
+				Parent_View 	@97
+				location   	(310, -176)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCB5CA30291"
+				client     	@97
+				supplier   	@93
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$67" @100
+			location   	(4524, 890)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DCB5CA60091"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$68" @101
+				Parent_View 	@100
+				location   	(316, -70)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCB5CA603D9"
+				client     	@100
+				supplier   	@90
+				line_style 	0)
+			    (object RoleView "$UNNAMED$69" @102
+				Parent_View 	@100
+				location   	(316, -70)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCB5CA603DA"
+				client     	@100
+				supplier   	@93
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$70" @103
+			location   	(4541, 1002)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DCB5CAA0020"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$71" @104
+				Parent_View 	@103
+				location   	(333, 42)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCB5CAB0170"
+				client     	@103
+				supplier   	@91
+				line_style 	0)
+			    (object RoleView "$UNNAMED$72" @105
+				Parent_View 	@103
+				location   	(333, 42)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCB5CAB0171"
+				client     	@103
+				supplier   	@93
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$73" @106
+			location   	(4541, 1108)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DCB5CAD035A"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$74" @107
+				Parent_View 	@106
+				location   	(333, 148)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCB5CAF0018"
+				client     	@106
+				supplier   	@92
+				line_style 	0)
+			    (object RoleView "$UNNAMED$75" @108
+				Parent_View 	@106
+				location   	(333, 148)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCB5CAF0019"
+				client     	@106
+				supplier   	@93
+				line_style 	0)))
+		    (object UseCaseView "Logical View::View Notifications" @109
+			location   	(4928, 1536)
+			label      	(object ItemLabel
+			    Parent_View 	@109
+			    location   	(4928, 1674)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	631
+			    justify    	0
+			    label      	"View Notifications")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DCA103F010E"
+			height     	118
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$76" @110
+			location   	(4560, 1242)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DCB5CB10342"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$77" @111
+				Parent_View 	@110
+				location   	(352, 282)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCB5CB203B0"
+				client     	@110
+				supplier   	@109
+				line_style 	0)
+			    (object RoleView "$UNNAMED$78" @112
+				Parent_View 	@110
+				location   	(352, 282)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DCB5CB203B1"
+				client     	@110
+				supplier   	@93
+				line_style 	0)))))
+	    (object ClassDiagram "NewDiagram3"
+		quid       	"5DCB5F6201D0"
+		title      	"NewDiagram3"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object ClassView "Class" "Logical View::NewClass" @113
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(656, 416)
+			label      	(object ItemLabel
+			    Parent_View 	@113
+			    location   	(549, 365)
+			    fill_color 	12058623
+			    nlines     	1
+			    max_width  	214
+			    justify    	0
+			    label      	"NewClass")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DCB5F8B0356"
+			width      	232
+			height     	126
+			annotation 	8
+			autoResize 	TRUE)))))
+    root_subsystem 	(object SubSystem "Component View"
+	quid       	"5DCA0C09023D"
+	physical_models 	(list unit_reference_list)
+	physical_presentations 	(list unit_reference_list
+	    (object Module_Diagram "Main"
+		quid       	"5DCA0C090293"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    process_structure 	(object Processes
+	quid       	"5DCA0C09023E"
+	ProcsNDevs 	(list
+	    (object Process_Diagram "Deployment View"
+		quid       	"5DCA0C090240"
+		title      	"Deployment View"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    properties 	(object Properties
+	quid       	"5DCA0C09023F"))

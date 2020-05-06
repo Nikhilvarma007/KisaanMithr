@@ -1,0 +1,2527 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8054a"
+    charSet    	0)
+
+(object Design "Logical View"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"5DDEF6480040"
+    defaults   	(object defaults
+	rightMargin 	0.250000
+	leftMargin 	0.250000
+	topMargin  	0.250000
+	bottomMargin 	0.500000
+	pageOverlap 	0.250000
+	clipIconLabels 	TRUE
+	autoResize 	TRUE
+	snapToGrid 	TRUE
+	gridX      	16
+	gridY      	16
+	defaultFont 	(object Font
+	    size       	10
+	    face       	"Arial"
+	    bold       	FALSE
+	    italics    	FALSE
+	    underline  	FALSE
+	    strike     	FALSE
+	    color      	0
+	    default_color 	TRUE)
+	showMessageNum 	1
+	showClassOfObject 	TRUE
+	notation   	"Unified")
+    root_usecase_package 	(object Class_Category "Use Case View"
+	quid       	"5DDEF6480042"
+	exportControl 	"Public"
+	global     	TRUE
+	logical_models 	(list unit_reference_list
+	    (object Mechanism @1
+		logical_models 	(list unit_reference_list)))
+	logical_presentations 	(list unit_reference_list
+	    (object UseCaseDiagram "Main"
+		quid       	"5DDEF648019C"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))
+	    (object InteractionDiagram "NewDiagram"
+		mechanism_ref 	@1
+		quid       	"5DDF03550082"
+		title      	"NewDiagram"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_category 	(object Class_Category "Logical View"
+	quid       	"5DDEF6480041"
+	exportControl 	"Public"
+	global     	TRUE
+	subsystem  	"Component View"
+	quidu      	"5DDEF6480043"
+	logical_models 	(list unit_reference_list
+	    (object Class "Admin"
+		quid       	"5DDEF652014A"
+		stereotype 	"Actor")
+	    (object Class "Faculty"
+		quid       	"5DDEF8430030"
+		stereotype 	"Actor")
+	    (object Class "student"
+		quid       	"5DDEFFAF0201"
+		stereotype 	"Actor")
+	    (object Class "admin"
+		quid       	"5DDF005F02D7"
+		operations 	(list Operations
+		    (object Operation "View faculty"
+			quid       	"5DDF00BF01E1"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "View Projects"
+			quid       	"5DDF00BE03D5"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "Add notifications"
+			quid       	"5DDF00860059"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "Add marks"
+			quid       	"5DDF01270057"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "view notifications"
+			quid       	"5DDF014D0044"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "view attendance"
+			quid       	"5DDF015A035B"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "view students"
+			quid       	"5DDF017600EA"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "view assignments"
+			quid       	"5DDF1A6702F5"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0))
+		class_attributes 	(list class_attribute_list
+		    (object ClassAttribute "Email"
+			quid       	"5DDF00770301")
+		    (object ClassAttribute "Password"
+			quid       	"5DDF007C0059")))
+	    (object Class "faculty"
+		quid       	"5DDF019C03B4"
+		operations 	(list Operations
+		    (object Operation "add lessonplan"
+			quid       	"5DDF01F90193"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "view lesson plan"
+			quid       	"5DDF1B040068"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "view students"
+			quid       	"5DDF0203002A"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "view notifications"
+			quid       	"5DDF0207036A"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "post notifications)"
+			quid       	"5DDF020D032A"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0))
+		class_attributes 	(list class_attribute_list
+		    (object ClassAttribute "email"
+			quid       	"5DDF01DD002C")
+		    (object ClassAttribute "password"
+			quid       	"5DDF01E3019C")))
+	    (object Class "Students"
+		quid       	"5DDF01BC008B"
+		operations 	(list Operations
+		    (object Operation "view assignments"
+			quid       	"5DDF02DF013E"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "view attendance"
+			quid       	"5DDF1ACF0034"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "view notifications"
+			quid       	"5DDF02EE03CA"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "view marks"
+			quid       	"5DDF02FA030C"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "view projects"
+			quid       	"5DDF1A7601FE"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0))
+		class_attributes 	(list class_attribute_list
+		    (object ClassAttribute "Email"
+			quid       	"5DDF02D4029B")
+		    (object ClassAttribute "Password"
+			quid       	"5DDF02D900DC")))
+	    (object UseCase "login"
+		quid       	"5DDEF66000F2")
+	    (object UseCase "View faculty"
+		quid       	"5DDEF66802EB")
+	    (object UseCase "Add salary details"
+		quid       	"5DDEF67603A4")
+	    (object UseCase "Add notifications"
+		quid       	"5DDEF6A9024E")
+	    (object UseCase "Add projects"
+		quid       	"5DDEF6ED02F1")
+	    (object UseCase "View student list"
+		quid       	"5DDEF6F802B9")
+	    (object UseCase "view assignments"
+		quid       	"5DDEF75A0356")
+	    (object UseCase "Logout"
+		quid       	"5DDEF785024F")
+	    (object UseCase "view students"
+		quid       	"5DDEF7B00151")
+	    (object UseCase "Login"
+		quid       	"5DDEF84C02F0")
+	    (object UseCase "View notifications"
+		quid       	"5DDEF8570000")
+	    (object UseCase "View students"
+		quid       	"5DDEFE2A0107")
+	    (object UseCase "add lesson plan"
+		quid       	"5DDEFE420036")
+	    (object UseCase "post notifications"
+		quid       	"5DDEFE9800D9")
+	    (object UseCase "view all students"
+		quid       	"5DDEFEA90310")
+	    (object UseCase "add students marks"
+		quid       	"5DDEFEE902B4")
+	    (object UseCase "
+Logout"
+		quid       	"5DDEFF2301F1")
+	    (object UseCase "view profile"
+		quid       	"5DDEFFC703D0")
+	    (object UseCase "view notifictions"
+		quid       	"5DDEFFEF002E")
+	    (object UseCase "view marks"
+		quid       	"5DDEFFFB01D5")
+	    (object UseCase "View attendance"
+		quid       	"5DDF192C0394")
+	    (object UseCase "view attendance"
+		quid       	"5DDF19A30212")
+	    (object Association "$UNNAMED$0"
+		quid       	"5DDEF7700010"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$1"
+			quid       	"5DDEF7700348"
+			supplier   	"Logical View::login"
+			quidu      	"5DDEF66000F2"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$2"
+			quid       	"5DDEF7700349"
+			supplier   	"Logical View::Admin"
+			quidu      	"5DDEF652014A"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$3"
+		quid       	"5DDEF77300BF"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$4"
+			quid       	"5DDEF773039F"
+			supplier   	"Logical View::View faculty"
+			quidu      	"5DDEF66802EB"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$5"
+			quid       	"5DDEF77303A0"
+			supplier   	"Logical View::Admin"
+			quidu      	"5DDEF652014A"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$6"
+		quid       	"5DDEF776008F"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$7"
+			quid       	"5DDEF7770037"
+			supplier   	"Logical View::Add salary details"
+			quidu      	"5DDEF67603A4"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$8"
+			quid       	"5DDEF7770038"
+			supplier   	"Logical View::Admin"
+			quidu      	"5DDEF652014A"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$9"
+		quid       	"5DDEF77900E0"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$10"
+			quid       	"5DDEF77A008F"
+			supplier   	"Logical View::Add notifications"
+			quidu      	"5DDEF6A9024E"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$11"
+			quid       	"5DDEF77A0090"
+			supplier   	"Logical View::Admin"
+			quidu      	"5DDEF652014A"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$12"
+		quid       	"5DDEF77C0250"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$13"
+			quid       	"5DDEF77E0228"
+			supplier   	"Logical View::Add projects"
+			quidu      	"5DDEF6ED02F1"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$14"
+			quid       	"5DDEF77E0229"
+			supplier   	"Logical View::Admin"
+			quidu      	"5DDEF652014A"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$15"
+		quid       	"5DDEF7810160"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$16"
+			quid       	"5DDEF7820310"
+			supplier   	"Logical View::View student list"
+			quidu      	"5DDEF6F802B9"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$17"
+			quid       	"5DDEF7820311"
+			supplier   	"Logical View::Admin"
+			quidu      	"5DDEF652014A"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$18"
+		quid       	"5DDEF7D20082"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$19"
+			quid       	"5DDEF7D300D4"
+			supplier   	"Logical View::view assignments"
+			quidu      	"5DDEF75A0356"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$20"
+			quid       	"5DDEF7D300D5"
+			supplier   	"Logical View::Admin"
+			quidu      	"5DDEF652014A"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$21"
+		quid       	"5DDEF7D501D4"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$22"
+			quid       	"5DDEF7D6039C"
+			supplier   	"Logical View::view students"
+			quidu      	"5DDEF7B00151"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$23"
+			quid       	"5DDEF7D6039D"
+			supplier   	"Logical View::Admin"
+			quidu      	"5DDEF652014A"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$24"
+		quid       	"5DDEF7D9033C"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$25"
+			quid       	"5DDEF7DB001C"
+			supplier   	"Logical View::Logout"
+			quidu      	"5DDEF785024F"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$26"
+			quid       	"5DDEF7DB001D"
+			supplier   	"Logical View::Admin"
+			quidu      	"5DDEF652014A"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$27"
+		quid       	"5DDEFF4701C0"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$28"
+			quid       	"5DDEFF480198"
+			supplier   	
+|Logical View::
+|Logout
+			
+			quidu      	"5DDEFF2301F1"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$29"
+			quid       	"5DDEFF480199"
+			supplier   	"Logical View::Faculty"
+			quidu      	"5DDEF8430030"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$30"
+		quid       	"5DDEFF4B00D8"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$31"
+			quid       	"5DDEFF4C039F"
+			supplier   	"Logical View::add students marks"
+			quidu      	"5DDEFEE902B4"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$32"
+			quid       	"5DDEFF4C03A0"
+			supplier   	"Logical View::Faculty"
+			quidu      	"5DDEF8430030"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$33"
+		quid       	"5DDEFF500260"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$34"
+			quid       	"5DDEFF5102C7"
+			supplier   	"Logical View::view all students"
+			quidu      	"5DDEFEA90310"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$35"
+			quid       	"5DDEFF5102C8"
+			supplier   	"Logical View::Faculty"
+			quidu      	"5DDEF8430030"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$36"
+		quid       	"5DDEFF570010"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$37"
+			quid       	"5DDEFF5800CF"
+			supplier   	"Logical View::Login"
+			quidu      	"5DDEF84C02F0"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$38"
+			quid       	"5DDEFF5800D0"
+			supplier   	"Logical View::Faculty"
+			quidu      	"5DDEF8430030"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$39"
+		quid       	"5DDEFF5E008D"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$40"
+			quid       	"5DDEFF5F0136"
+			supplier   	"Logical View::View notifications"
+			quidu      	"5DDEF8570000"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$41"
+			quid       	"5DDEFF5F0137"
+			supplier   	"Logical View::Faculty"
+			quidu      	"5DDEF8430030"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$42"
+		quid       	"5DDEFF620117"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$43"
+			quid       	"5DDEFF630146"
+			supplier   	"Logical View::View students"
+			quidu      	"5DDEFE2A0107"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$44"
+			quid       	"5DDEFF630147"
+			supplier   	"Logical View::Faculty"
+			quidu      	"5DDEF8430030"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$45"
+		quid       	"5DDEFF6A02D4"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$46"
+			quid       	"5DDEFF6C00D5"
+			supplier   	"Logical View::add lesson plan"
+			quidu      	"5DDEFE420036"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$47"
+			quid       	"5DDEFF6C00D6"
+			supplier   	"Logical View::Faculty"
+			quidu      	"5DDEF8430030"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$48"
+		quid       	"5DDF000F03C5"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$49"
+			quid       	"5DDF001003E5"
+			supplier   	"Logical View::Login"
+			quidu      	"5DDEF84C02F0"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$50"
+			quid       	"5DDF001003E6"
+			supplier   	"Logical View::student"
+			quidu      	"5DDEFFAF0201"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$51"
+		quid       	"5DDF001503BD"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$52"
+			quid       	"5DDF001602F4"
+			supplier   	"Logical View::view profile"
+			quidu      	"5DDEFFC703D0"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$53"
+			quid       	"5DDF001602F5"
+			supplier   	"Logical View::student"
+			quidu      	"5DDEFFAF0201"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$54"
+		quid       	"5DDF001903A5"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$55"
+			quid       	"5DDF001A0244"
+			supplier   	"Logical View::view notifictions"
+			quidu      	"5DDEFFEF002E"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$56"
+			quid       	"5DDF001A0245"
+			supplier   	"Logical View::student"
+			quidu      	"5DDEFFAF0201"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$57"
+		quid       	"5DDF001D003D"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$58"
+			quid       	"5DDF001D02EC"
+			supplier   	"Logical View::view marks"
+			quidu      	"5DDEFFFB01D5"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$59"
+			quid       	"5DDF001D02ED"
+			supplier   	"Logical View::student"
+			quidu      	"5DDEFFAF0201"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$60"
+		quid       	"5DDF0026002A"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$61"
+			quid       	"5DDF0027010B"
+			supplier   	"Logical View::Logout"
+			quidu      	"5DDEF785024F"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$62"
+			quid       	"5DDF0027010C"
+			supplier   	"Logical View::student"
+			quidu      	"5DDEFFAF0201"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$63"
+		quid       	"5DDF03110237"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$64"
+			quid       	"5DDF031201B8"
+			supplier   	"Logical View::faculty"
+			quidu      	"5DDF019C03B4"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$65"
+			quid       	"5DDF031201B9"
+			supplier   	"Logical View::admin"
+			quidu      	"5DDF005F02D7"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$66"
+		quid       	"5DDF03150316"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$67"
+			quid       	"5DDF03160258"
+			supplier   	"Logical View::Students"
+			quidu      	"5DDF01BC008B"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$68"
+			quid       	"5DDF0316025A"
+			supplier   	"Logical View::faculty"
+			quidu      	"5DDF019C03B4"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$69"
+		quid       	"5DDF19490108"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$70"
+			quid       	"5DDF194A0277"
+			supplier   	"Logical View::View attendance"
+			quidu      	"5DDF192C0394"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$71"
+			quid       	"5DDF194A0278"
+			supplier   	"Logical View::Admin"
+			quidu      	"5DDEF652014A"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$72"
+		quid       	"5DDF19C400C5"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$73"
+			quid       	"5DDF19C50303"
+			supplier   	"Logical View::view attendance"
+			quidu      	"5DDF19A30212"
+			is_navigable 	TRUE
+			is_aggregate 	TRUE)
+		    (object Role "$UNNAMED$74"
+			quid       	"5DDF19C50304"
+			supplier   	"Logical View::student"
+			quidu      	"5DDEFFAF0201"
+			is_navigable 	TRUE)))
+	    (object Mechanism @2
+		logical_models 	(list unit_reference_list
+		    (object Object "Admin"
+			quid       	"5DDF1C4A03DB"
+			collaborators 	(list link_list
+			    (object Link
+				quid       	"5DDF1C8600C0"
+				supplier   	"Admin"
+				quidu      	"5DDF1C4A03DB"
+				messages   	(list Messages
+				    (object Message "login"
+					quid       	"5DDF1C8600C1"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	0)))
+			    (object Link
+				quid       	"5DDF1CBF02F5"
+				supplier   	"System"
+				quidu      	"5DDF1C5F02A2"
+				messages   	(list Messages
+				    (object Message "Login"
+					quid       	"5DDF1CBF02F6"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	1)
+				    (object Message "Add notifications"
+					quid       	"5DDF1D10004B"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	7)
+				    (object Message "Add Projects"
+					quid       	"5DDF1D1C035C"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	9)
+				    (object Message "Add Marks"
+					quid       	"5DDF1D2E013C"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	13)
+				    (object Message "View attendance"
+					quid       	"5DDF1D41002D"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	15)
+				    (object Message "Student list"
+					quid       	"5DDF1D4D01FD"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	17)
+				    (object Message "View assignments"
+					quid       	"5DDF1D850218"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	19)
+				    (object Message "View attendance"
+					quid       	"5DDF1D9D0341"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	21)
+				    (object Message "View  faculty list"
+					quid       	"5DDF1DFB01AE"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	3)))
+			    (object Link
+				quid       	"5DDF204F0030"
+				supplier   	"Faculty"
+				quidu      	"5DDF1C570302"))
+			persistence 	"Transient"
+			multi      	FALSE)
+		    (object Object "Faculty"
+			quid       	"5DDF1C570302"
+			collaborators 	(list link_list
+			    (object Link
+				quid       	"5DDF1E3902B0"
+				supplier   	"System"
+				quidu      	"5DDF1C5F02A2"
+				messages   	(list Messages
+				    (object Message "Add marks"
+					quid       	"5DDF1E3902B1"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	5)
+				    (object Message "View projects"
+					quid       	"5DDF1E8200CB"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	8)
+				    (object Message "Add attendance"
+					quid       	"5DDF1E9B0385"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	11)
+				    (object Message "View students list"
+					quid       	"5DDF1EAC0005"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	16)
+				    (object Message "Login"
+					quid       	"5DDF1F35013B"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	2))))
+			persistence 	"Transient"
+			multi      	FALSE)
+		    (object Object "System"
+			quid       	"5DDF1C5F02A2"
+			persistence 	"Transient"
+			multi      	FALSE)
+		    (object Object "Student"
+			quid       	"5DDF1C6603E1"
+			collaborators 	(list link_list
+			    (object Link
+				quid       	"5DDF1CD401E3"
+				supplier   	"System"
+				quidu      	"5DDF1C5F02A2"
+				messages   	(list Messages
+				    (object Message "Register"
+					quid       	"5DDF1CD401E4"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	4)
+				    (object Message "View projects"
+					quid       	"5DDF1EF80171"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	10)
+				    (object Message "Login"
+					quid       	"5DDF1F230152"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	6)
+				    (object Message "view notifications"
+					quid       	"5DDF1F4601E4"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	12)
+				    (object Message "view marks"
+					quid       	"5DDF1F54014C"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	14)
+				    (object Message "view assignments"
+					quid       	"5DDF1F600184"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	18)
+				    (object Message "view attendance"
+					quid       	"5DDF1F9C014F"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	20)))
+			    (object Link
+				quid       	"5DDF20550060"
+				supplier   	"Faculty"
+				quidu      	"5DDF1C570302"))
+			persistence 	"Transient"
+			multi      	FALSE))))
+	logical_presentations 	(list unit_reference_list
+	    (object ClassDiagram "Main"
+		quid       	"5DDEF64801A1"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	3468
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object ClassView "Class" "Logical View::admin" @3
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(6160, 576)
+			label      	(object ItemLabel
+			    Parent_View 	@3
+			    location   	(5963, 270)
+			    fill_color 	12058623
+			    nlines     	1
+			    max_width  	394
+			    justify    	0
+			    label      	"admin")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DDF005F02D7"
+			compartment 	(object Compartment
+			    Parent_View 	@3
+			    location   	(5963, 330)
+			    icon_style 	"Icon"
+			    fill_color 	12058623
+			    anchor     	2
+			    nlines     	11
+			    max_width  	391)
+			width      	412
+			height     	636
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::faculty" @4
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(6768, 544)
+			label      	(object ItemLabel
+			    Parent_View 	@4
+			    location   	(6571, 313)
+			    fill_color 	12058623
+			    nlines     	1
+			    max_width  	394
+			    justify    	0
+			    label      	"faculty")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DDF019C03B4"
+			compartment 	(object Compartment
+			    Parent_View 	@4
+			    location   	(6571, 373)
+			    icon_style 	"Icon"
+			    fill_color 	12058623
+			    anchor     	2
+			    nlines     	8
+			    max_width  	391)
+			width      	412
+			height     	486
+			annotation 	8
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$63" @5
+			location   	(6463, 559)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DDF03110237"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$64" @6
+				Parent_View 	@5
+				location   	(367, -17)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DDF031201B8"
+				client     	@5
+				supplier   	@4
+				line_style 	0)
+			    (object RoleView "$UNNAMED$65" @7
+				Parent_View 	@5
+				location   	(367, -17)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DDF031201B9"
+				client     	@5
+				supplier   	@3
+				line_style 	0)))
+		    (object ClassView "Class" "Logical View::Students" @8
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(7312, 512)
+			label      	(object ItemLabel
+			    Parent_View 	@8
+			    location   	(7115, 281)
+			    fill_color 	12058623
+			    nlines     	1
+			    max_width  	394
+			    justify    	0
+			    label      	"Students")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DDF01BC008B"
+			compartment 	(object Compartment
+			    Parent_View 	@8
+			    location   	(7115, 341)
+			    icon_style 	"Icon"
+			    fill_color 	12058623
+			    anchor     	2
+			    nlines     	8
+			    max_width  	397)
+			width      	412
+			height     	486
+			annotation 	8
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$66" @9
+			location   	(7039, 527)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DDF03150316"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$67" @10
+				Parent_View 	@9
+				location   	(271, -17)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DDF03160258"
+				client     	@9
+				supplier   	@8
+				line_style 	0)
+			    (object RoleView "$UNNAMED$68" @11
+				Parent_View 	@9
+				location   	(271, -17)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5DDF0316025A"
+				client     	@9
+				supplier   	@4
+				line_style 	0)))))
+	    (object InteractionDiagram "NewDiagram2"
+		mechanism_ref 	@2
+		quid       	"5DDF1C4900FC"
+		title      	"NewDiagram2"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object InterObjView "Admin" @12
+			location   	(448, 224)
+			font       	(object Font
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@12
+			    location   	(448, 224)
+			    fill_color 	12058623
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	282
+			    justify    	0
+			    label      	"Admin")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DDF1C4A03DB"
+			width      	300
+			height     	2657
+			icon_height 	0
+			icon_width 	0
+			annotation 	1
+			Focus_Of_Control 	(object Focus_Of_Control "" @13
+			    location   	(448, 496)
+			    line_color 	3342489
+			    InterObjView 	@12
+			    height     	184
+			    y_coord    	124
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @14
+			    location   	(448, 816)
+			    line_color 	3342489
+			    InterObjView 	@12
+			    height     	136
+			    y_coord    	76
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @15
+			    location   	(448, 1200)
+			    line_color 	3342489
+			    InterObjView 	@12
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @16
+			    location   	(448, 1424)
+			    line_color 	3342489
+			    InterObjView 	@12
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @17
+			    location   	(448, 1792)
+			    line_color 	3342489
+			    InterObjView 	@12
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @18
+			    location   	(448, 2016)
+			    line_color 	3342489
+			    InterObjView 	@12
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @19
+			    location   	(448, 2224)
+			    line_color 	3342489
+			    InterObjView 	@12
+			    height     	184
+			    y_coord    	124
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @20
+			    location   	(448, 2432)
+			    line_color 	3342489
+			    InterObjView 	@12
+			    height     	168
+			    y_coord    	108
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @21
+			    location   	(448, 2640)
+			    line_color 	3342489
+			    InterObjView 	@12
+			    height     	152
+			    y_coord    	92
+			    Nested     	FALSE))
+		    (object InterObjView "Faculty" @22
+			location   	(912, 224)
+			font       	(object Font
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@22
+			    location   	(912, 224)
+			    fill_color 	12058623
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	282
+			    justify    	0
+			    label      	"Faculty")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DDF1C570302"
+			width      	300
+			height     	2657
+			icon_height 	0
+			icon_width 	0
+			annotation 	1
+			Focus_Of_Control 	(object Focus_Of_Control "" @23
+			    location   	(912, 624)
+			    line_color 	3342489
+			    InterObjView 	@22
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @24
+			    location   	(912, 944)
+			    line_color 	3342489
+			    InterObjView 	@22
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @25
+			    location   	(912, 1296)
+			    line_color 	3342489
+			    InterObjView 	@22
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @26
+			    location   	(912, 1568)
+			    line_color 	3342489
+			    InterObjView 	@22
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @27
+			    location   	(912, 2080)
+			    line_color 	3342489
+			    InterObjView 	@22
+			    height     	152
+			    y_coord    	92
+			    Nested     	FALSE))
+		    (object InterObjView "System" @28
+			location   	(1376, 224)
+			font       	(object Font
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@28
+			    location   	(1376, 224)
+			    fill_color 	12058623
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	282
+			    justify    	0
+			    label      	"System")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DDF1C5F02A2"
+			width      	300
+			height     	2657
+			icon_height 	0
+			icon_width 	0
+			annotation 	1
+			Focus_Of_Control 	(object Focus_Of_Control "" @29
+			    location   	(1360, 560)
+			    line_color 	3342489
+			    InterObjView 	@28
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @30
+			    location   	(1376, 624)
+			    line_color 	3342489
+			    InterObjView 	@28
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @31
+			    location   	(1360, 832)
+			    line_color 	3342489
+			    InterObjView 	@28
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @32
+			    location   	(1360, 864)
+			    line_color 	3342489
+			    InterObjView 	@28
+			    height     	60
+			    y_coord    	0
+			    Nested     	TRUE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @33
+			    location   	(1360, 944)
+			    line_color 	3342489
+			    InterObjView 	@28
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @34
+			    location   	(1376, 1072)
+			    line_color 	3342489
+			    InterObjView 	@28
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @35
+			    location   	(1360, 1200)
+			    line_color 	3342489
+			    InterObjView 	@28
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @36
+			    location   	(1360, 1296)
+			    line_color 	3342489
+			    InterObjView 	@28
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @37
+			    location   	(1360, 1424)
+			    line_color 	3342489
+			    InterObjView 	@28
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @38
+			    location   	(1376, 1440)
+			    line_color 	3342489
+			    InterObjView 	@28
+			    height     	60
+			    y_coord    	0
+			    Nested     	TRUE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @39
+			    location   	(1376, 1568)
+			    line_color 	3342489
+			    InterObjView 	@28
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @40
+			    location   	(1376, 1664)
+			    line_color 	3342489
+			    InterObjView 	@28
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @41
+			    location   	(1360, 1792)
+			    line_color 	3342489
+			    InterObjView 	@28
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @42
+			    location   	(1376, 1888)
+			    line_color 	3342489
+			    InterObjView 	@28
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @43
+			    location   	(1360, 2016)
+			    line_color 	3342489
+			    InterObjView 	@28
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @44
+			    location   	(1376, 2112)
+			    line_color 	3342489
+			    InterObjView 	@28
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @45
+			    location   	(1360, 2288)
+			    line_color 	3342489
+			    InterObjView 	@28
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @46
+			    location   	(1376, 2304)
+			    line_color 	3342489
+			    InterObjView 	@28
+			    height     	60
+			    y_coord    	0
+			    Nested     	TRUE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @47
+			    location   	(1360, 2480)
+			    line_color 	3342489
+			    InterObjView 	@28
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @48
+			    location   	(1376, 2512)
+			    line_color 	3342489
+			    InterObjView 	@28
+			    height     	60
+			    y_coord    	0
+			    Nested     	TRUE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @49
+			    location   	(1360, 2672)
+			    line_color 	3342489
+			    InterObjView 	@28
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE))
+		    (object InterObjView "Student" @50
+			location   	(1808, 224)
+			font       	(object Font
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@50
+			    location   	(1808, 224)
+			    fill_color 	12058623
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	282
+			    justify    	0
+			    label      	"Student")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DDF1C6603E1"
+			width      	300
+			height     	2657
+			icon_height 	0
+			icon_width 	0
+			annotation 	1
+			Focus_Of_Control 	(object Focus_Of_Control "" @51
+			    location   	(1808, 704)
+			    line_color 	3342489
+			    InterObjView 	@50
+			    height     	280
+			    y_coord    	220
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @52
+			    location   	(1808, 1072)
+			    line_color 	3342489
+			    InterObjView 	@50
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @53
+			    location   	(1808, 1440)
+			    line_color 	3342489
+			    InterObjView 	@50
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @54
+			    location   	(1808, 1664)
+			    line_color 	3342489
+			    InterObjView 	@50
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @55
+			    location   	(1808, 1888)
+			    line_color 	3342489
+			    InterObjView 	@50
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @56
+			    location   	(1808, 2288)
+			    line_color 	3342489
+			    InterObjView 	@50
+			    height     	136
+			    y_coord    	76
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @57
+			    location   	(1808, 2512)
+			    line_color 	3342489
+			    InterObjView 	@50
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE))
+		    (object SelfMessView "" @58
+			location   	(0, 480)
+			label      	(object SegLabel @59
+			    Parent_View 	@58
+			    location   	(539, 436)
+			    quidu      	"5DDF1C8600C1"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	84
+			    justify    	0
+			    label      	"login"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@12
+			supplier   	@12
+			Focus_Src  	@13
+			origin     	(464, 480)
+			terminus   	(614, 480)
+			ordinal    	0)
+		    (object InterMessView "" @60
+			location   	(0, 560)
+			label      	(object SegLabel @61
+			    Parent_View 	@60
+			    location   	(780, 534)
+			    quidu      	"5DDF1CBF02F6"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	97
+			    justify    	0
+			    label      	"Login"
+			    pctDist    	0.353409
+			    height     	27
+			    orientation 	0)
+			line_color 	3342489
+			client     	@12
+			supplier   	@28
+			Focus_Src  	@13
+			Focus_Entry 	@29
+			origin     	(464, 560)
+			terminus   	(1360, 560)
+			ordinal    	1)
+		    (object InterMessView "" @62
+			location   	(0, 864)
+			label      	(object SegLabel @63
+			    Parent_View 	@62
+			    location   	(1592, 820)
+			    quidu      	"5DDF1CD401E4"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	150
+			    justify    	0
+			    label      	"Register"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	1)
+			line_color 	3342489
+			client     	@50
+			supplier   	@28
+			Focus_Src  	@51
+			Focus_Entry 	@32
+			origin     	(1792, 864)
+			terminus   	(1392, 864)
+			ordinal    	4)
+		    (object InterMessView "" @64
+			location   	(0, 1200)
+			label      	(object SegLabel @65
+			    Parent_View 	@64
+			    location   	(732, 1175)
+			    quidu      	"5DDF1D10004B"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	297
+			    justify    	0
+			    label      	"Add notifications"
+			    pctDist    	0.300000
+			    height     	26
+			    orientation 	0)
+			line_color 	3342489
+			client     	@12
+			supplier   	@28
+			Focus_Src  	@15
+			Focus_Entry 	@35
+			origin     	(464, 1200)
+			terminus   	(1360, 1200)
+			ordinal    	7)
+		    (object InterMessView "" @66
+			location   	(0, 1424)
+			label      	(object SegLabel @67
+			    Parent_View 	@66
+			    location   	(715, 1398)
+			    quidu      	"5DDF1D1C035C"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	234
+			    justify    	0
+			    label      	"Add Projects"
+			    pctDist    	0.280682
+			    height     	27
+			    orientation 	0)
+			line_color 	3342489
+			client     	@12
+			supplier   	@28
+			Focus_Src  	@16
+			Focus_Entry 	@37
+			origin     	(464, 1424)
+			terminus   	(1360, 1424)
+			ordinal    	9)
+		    (object InterMessView "" @68
+			location   	(0, 1792)
+			label      	(object SegLabel @69
+			    Parent_View 	@68
+			    location   	(665, 1767)
+			    quidu      	"5DDF1D2E013C"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	197
+			    justify    	0
+			    label      	"Add Marks"
+			    pctDist    	0.225000
+			    height     	26
+			    orientation 	0)
+			line_color 	3342489
+			client     	@12
+			supplier   	@28
+			Focus_Src  	@17
+			Focus_Entry 	@41
+			origin     	(464, 1792)
+			terminus   	(1360, 1792)
+			ordinal    	13)
+		    (object InterMessView "" @70
+			location   	(0, 2016)
+			label      	(object SegLabel @71
+			    Parent_View 	@70
+			    location   	(699, 1974)
+			    quidu      	"5DDF1D41002D"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	300
+			    justify    	0
+			    label      	"View attendance"
+			    pctDist    	0.262500
+			    height     	43
+			    orientation 	0)
+			line_color 	3342489
+			client     	@12
+			supplier   	@28
+			Focus_Src  	@18
+			Focus_Entry 	@43
+			origin     	(464, 2016)
+			terminus   	(1360, 2016)
+			ordinal    	15)
+		    (object InterMessView "" @72
+			location   	(0, 2288)
+			label      	(object SegLabel @73
+			    Parent_View 	@72
+			    location   	(701, 2260)
+			    quidu      	"5DDF1D4D01FD"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	203
+			    justify    	0
+			    label      	"Student list"
+			    pctDist    	0.264773
+			    height     	29
+			    orientation 	0)
+			line_color 	3342489
+			client     	@12
+			supplier   	@28
+			Focus_Src  	@19
+			Focus_Entry 	@45
+			origin     	(464, 2288)
+			terminus   	(1360, 2288)
+			ordinal    	17)
+		    (object InterMessView "" @74
+			location   	(0, 2480)
+			label      	(object SegLabel @75
+			    Parent_View 	@74
+			    location   	(730, 2438)
+			    quidu      	"5DDF1D850218"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	331
+			    justify    	0
+			    label      	"View assignments"
+			    pctDist    	0.297727
+			    height     	43
+			    orientation 	0)
+			line_color 	3342489
+			client     	@12
+			supplier   	@28
+			Focus_Src  	@20
+			Focus_Entry 	@47
+			origin     	(464, 2480)
+			terminus   	(1360, 2480)
+			ordinal    	19)
+		    (object InterMessView "" @76
+			location   	(0, 2672)
+			label      	(object SegLabel @77
+			    Parent_View 	@76
+			    location   	(747, 2628)
+			    quidu      	"5DDF1D9D0341"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	300
+			    justify    	0
+			    label      	"View attendance"
+			    pctDist    	0.315909
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@12
+			supplier   	@28
+			Focus_Src  	@21
+			Focus_Entry 	@49
+			origin     	(464, 2672)
+			terminus   	(1360, 2672)
+			ordinal    	21)
+		    (object InterMessView "" @78
+			location   	(0, 832)
+			label      	(object SegLabel @79
+			    Parent_View 	@78
+			    location   	(912, 788)
+			    quidu      	"5DDF1DFB01AE"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	294
+			    justify    	0
+			    label      	"View  faculty list"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@12
+			supplier   	@28
+			Focus_Src  	@14
+			Focus_Entry 	@31
+			origin     	(464, 832)
+			terminus   	(1360, 832)
+			ordinal    	3)
+		    (object InterMessView "" @80
+			location   	(0, 944)
+			label      	(object SegLabel @81
+			    Parent_View 	@80
+			    location   	(1144, 900)
+			    quidu      	"5DDF1E3902B1"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	197
+			    justify    	0
+			    label      	"Add marks"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@22
+			supplier   	@28
+			Focus_Src  	@24
+			Focus_Entry 	@33
+			origin     	(928, 944)
+			terminus   	(1360, 944)
+			ordinal    	5)
+		    (object InterMessView "" @82
+			location   	(0, 1296)
+			label      	(object SegLabel @83
+			    Parent_View 	@82
+			    location   	(1144, 1252)
+			    quidu      	"5DDF1E8200CB"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	241
+			    justify    	0
+			    label      	"View projects"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@22
+			supplier   	@28
+			Focus_Src  	@25
+			Focus_Entry 	@36
+			origin     	(928, 1296)
+			terminus   	(1360, 1296)
+			ordinal    	8)
+		    (object InterMessView "" @84
+			location   	(0, 1568)
+			label      	(object SegLabel @85
+			    Parent_View 	@84
+			    location   	(1144, 1524)
+			    quidu      	"5DDF1E9B0385"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	284
+			    justify    	0
+			    label      	"Add attendance"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@22
+			supplier   	@28
+			Focus_Src  	@26
+			Focus_Entry 	@39
+			origin     	(928, 1568)
+			terminus   	(1360, 1568)
+			ordinal    	11)
+		    (object InterMessView "" @86
+			location   	(0, 2112)
+			label      	(object SegLabel @87
+			    Parent_View 	@86
+			    location   	(1144, 2068)
+			    quidu      	"5DDF1EAC0005"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	319
+			    justify    	0
+			    label      	"View students list"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@22
+			supplier   	@28
+			Focus_Src  	@27
+			Focus_Entry 	@44
+			origin     	(928, 2112)
+			terminus   	(1360, 2112)
+			ordinal    	16)
+		    (object InterMessView "" @88
+			location   	(0, 1440)
+			label      	(object SegLabel @89
+			    Parent_View 	@88
+			    location   	(1592, 1396)
+			    quidu      	"5DDF1EF80171"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	241
+			    justify    	0
+			    label      	"View projects"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	1)
+			line_color 	3342489
+			client     	@50
+			supplier   	@28
+			Focus_Src  	@53
+			Focus_Entry 	@38
+			origin     	(1792, 1440)
+			terminus   	(1392, 1440)
+			ordinal    	10)
+		    (object InterMessView "" @90
+			location   	(0, 1072)
+			label      	(object SegLabel @91
+			    Parent_View 	@90
+			    location   	(1592, 1028)
+			    quidu      	"5DDF1F230152"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	97
+			    justify    	0
+			    label      	"Login"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	1)
+			line_color 	3342489
+			client     	@50
+			supplier   	@28
+			Focus_Src  	@52
+			Focus_Entry 	@34
+			origin     	(1792, 1072)
+			terminus   	(1392, 1072)
+			ordinal    	6)
+		    (object InterMessView "" @92
+			location   	(0, 624)
+			label      	(object SegLabel @93
+			    Parent_View 	@92
+			    location   	(1144, 580)
+			    quidu      	"5DDF1F35013B"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	97
+			    justify    	0
+			    label      	"Login"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@22
+			supplier   	@28
+			Focus_Src  	@23
+			Focus_Entry 	@30
+			origin     	(928, 624)
+			terminus   	(1360, 624)
+			ordinal    	2)
+		    (object InterMessView "" @94
+			location   	(0, 1664)
+			label      	(object SegLabel @95
+			    Parent_View 	@94
+			    location   	(1592, 1620)
+			    quidu      	"5DDF1F4601E4"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	300
+			    justify    	0
+			    label      	"view notifications"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	1)
+			line_color 	3342489
+			client     	@50
+			supplier   	@28
+			Focus_Src  	@54
+			Focus_Entry 	@40
+			origin     	(1792, 1664)
+			terminus   	(1392, 1664)
+			ordinal    	12)
+		    (object InterMessView "" @96
+			location   	(0, 1888)
+			label      	(object SegLabel @97
+			    Parent_View 	@96
+			    location   	(1592, 1844)
+			    quidu      	"5DDF1F54014C"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	200
+			    justify    	0
+			    label      	"view marks"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	1)
+			line_color 	3342489
+			client     	@50
+			supplier   	@28
+			Focus_Src  	@55
+			Focus_Entry 	@42
+			origin     	(1792, 1888)
+			terminus   	(1392, 1888)
+			ordinal    	14)
+		    (object InterMessView "" @98
+			location   	(0, 2304)
+			label      	(object SegLabel @99
+			    Parent_View 	@98
+			    location   	(1592, 2260)
+			    quidu      	"5DDF1F600184"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	319
+			    justify    	0
+			    label      	"view assignments"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	1)
+			line_color 	3342489
+			client     	@50
+			supplier   	@28
+			Focus_Src  	@56
+			Focus_Entry 	@46
+			origin     	(1792, 2304)
+			terminus   	(1392, 2304)
+			ordinal    	18)
+		    (object InterMessView "" @100
+			location   	(0, 2512)
+			label      	(object SegLabel @101
+			    Parent_View 	@100
+			    location   	(1592, 2468)
+			    quidu      	"5DDF1F9C014F"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	287
+			    justify    	0
+			    label      	"view attendance"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	1)
+			line_color 	3342489
+			client     	@50
+			supplier   	@28
+			Focus_Src  	@57
+			Focus_Entry 	@48
+			origin     	(1792, 2512)
+			terminus   	(1392, 2512)
+			ordinal    	20)))
+	    (object ObjectDiagram "NewDiagram2"
+		mechanism_ref 	@2
+		quid       	"5DDF20410119"
+		title      	"NewDiagram2"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object ObjectView "Admin" @102
+			location   	(992, 336)
+			font       	(object Font
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@102
+			    location   	(911, 285)
+			    fill_color 	12058623
+			    nlines     	2
+			    max_width  	162
+			    justify    	0
+			    label      	"Admin")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DDF1C4A03DB"
+			height     	126
+			annotation 	4
+			autoResize 	TRUE
+			subobjects 	0
+			x_offset   	0.000000
+			y_offset   	0.000000)
+		    (object ObjectView "Faculty" @103
+			location   	(2176, 304)
+			font       	(object Font
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@103
+			    location   	(2095, 253)
+			    fill_color 	12058623
+			    nlines     	2
+			    max_width  	162
+			    justify    	0
+			    label      	"Faculty")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DDF1C570302"
+			height     	126
+			annotation 	4
+			autoResize 	TRUE
+			subobjects 	0
+			x_offset   	0.000000
+			y_offset   	0.000000)
+		    (object ObjectView "System" @104
+			location   	(1024, 1488)
+			font       	(object Font
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@104
+			    location   	(943, 1437)
+			    fill_color 	12058623
+			    nlines     	2
+			    max_width  	162
+			    justify    	0
+			    label      	"System")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DDF1C5F02A2"
+			height     	126
+			annotation 	4
+			autoResize 	TRUE
+			subobjects 	0
+			x_offset   	0.000000
+			y_offset   	0.000000)
+		    (object ObjectView "Student" @105
+			location   	(2192, 1504)
+			font       	(object Font
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@105
+			    location   	(2111, 1453)
+			    fill_color 	12058623
+			    nlines     	2
+			    max_width  	162
+			    justify    	0
+			    label      	"Student")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DDF1C6603E1"
+			height     	126
+			annotation 	4
+			autoResize 	TRUE
+			subobjects 	0
+			x_offset   	0.000000
+			y_offset   	0.000000)
+		    (object LinkSelfView "" @106
+			location   	(992, 123)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DDF1C8600C0"
+			client     	@102
+			supplier   	@102
+			line_style 	0)
+		    (object MessView "" @107
+			location   	(992, 79)
+			line_color 	3342489
+			label      	(object SegLabel @108
+			    Parent_View 	@107
+			    location   	(992, 35)
+			    quidu      	"5DDF1C8600C1"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	131
+			    justify    	0
+			    label      	"login"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			object_arc 	@106
+			pctDist    	0.500000
+			height     	45
+			orientation 	0
+			dir        	1
+			origin     	(932, 79)
+			terminus   	(1052, 79))
+		    (object LinkView "" @109
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DDF1CBF02F5"
+			client     	@102
+			supplier   	@104
+			line_style 	0)
+		    (object MessView "" @110
+			location   	(1052, 911)
+			line_color 	3342489
+			label      	(object SegLabel @111
+			    Parent_View 	@110
+			    location   	(2679, 450)
+			    quidu      	"5DDF1CBF02F6"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	144
+			    justify    	0
+			    label      	"Login"
+			    pctDist    	-2.900000
+			    height     	1629
+			    orientation 	0)
+			label      	(object SegLabel @112
+			    Parent_View 	@110
+			    location   	(2679, 497)
+			    quidu      	"5DDF1DFB01AE"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	341
+			    justify    	0
+			    label      	"View  faculty list"
+			    pctDist    	-2.508333
+			    height     	1629
+			    orientation 	0)
+			label      	(object SegLabel @113
+			    Parent_View 	@110
+			    location   	(2679, 544)
+			    quidu      	"5DDF1D10004B"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	341
+			    justify    	0
+			    label      	"Add notifications"
+			    pctDist    	-2.116667
+			    height     	1629
+			    orientation 	0)
+			label      	(object SegLabel @114
+			    Parent_View 	@110
+			    location   	(2679, 591)
+			    quidu      	"5DDF1D1C035C"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	297
+			    justify    	0
+			    label      	"Add Projects"
+			    pctDist    	-1.725000
+			    height     	1629
+			    orientation 	0)
+			label      	(object SegLabel @115
+			    Parent_View 	@110
+			    location   	(2679, 638)
+			    quidu      	"5DDF1D2E013C"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	262
+			    justify    	0
+			    label      	"Add Marks"
+			    pctDist    	-1.333333
+			    height     	1629
+			    orientation 	0)
+			label      	(object SegLabel @116
+			    Parent_View 	@110
+			    location   	(2679, 685)
+			    quidu      	"5DDF1D41002D"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	366
+			    justify    	0
+			    label      	"View attendance"
+			    pctDist    	-0.941667
+			    height     	1629
+			    orientation 	0)
+			label      	(object SegLabel @117
+			    Parent_View 	@110
+			    location   	(2679, 732)
+			    quidu      	"5DDF1D4D01FD"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	272
+			    justify    	0
+			    label      	"Student list"
+			    pctDist    	-0.550000
+			    height     	1629
+			    orientation 	0)
+			label      	(object SegLabel @118
+			    Parent_View 	@110
+			    location   	(2679, 779)
+			    quidu      	"5DDF1D850218"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	397
+			    justify    	0
+			    label      	"View assignments"
+			    pctDist    	-0.158333
+			    height     	1629
+			    orientation 	0)
+			label      	(object SegLabel @119
+			    Parent_View 	@110
+			    location   	(2679, 826)
+			    quidu      	"5DDF1D9D0341"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	366
+			    justify    	0
+			    label      	"View attendance"
+			    pctDist    	0.233333
+			    height     	1629
+			    orientation 	0)
+			object_arc 	@109
+			pctDist    	0.500000
+			height     	45
+			orientation 	0
+			dir        	1
+			origin     	(1050, 851)
+			terminus   	(1054, 971))
+		    (object LinkView "" @120
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DDF204F0030"
+			client     	@102
+			supplier   	@103
+			line_style 	0)
+		    (object LinkView "" @121
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DDF1E3902B0"
+			client     	@103
+			supplier   	@104
+			line_style 	0)
+		    (object MessView "" @122
+			location   	(1631, 926)
+			line_color 	3342489
+			label      	(object SegLabel @123
+			    Parent_View 	@122
+			    location   	(1709, 475)
+			    quidu      	"5DDF1F35013B"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	144
+			    justify    	0
+			    label      	"Login"
+			    pctDist    	-2.699577
+			    height     	257
+			    orientation 	1)
+			label      	(object SegLabel @124
+			    Parent_View 	@122
+			    location   	(1709, 522)
+			    quidu      	"5DDF1E3902B1"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	237
+			    justify    	0
+			    label      	"Add marks"
+			    pctDist    	-2.646544
+			    height     	211
+			    orientation 	1)
+			label      	(object SegLabel @125
+			    Parent_View 	@122
+			    location   	(1709, 569)
+			    quidu      	"5DDF1E8200CB"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	287
+			    justify    	0
+			    label      	"View projects"
+			    pctDist    	-2.593512
+			    height     	164
+			    orientation 	1)
+			label      	(object SegLabel @126
+			    Parent_View 	@122
+			    location   	(1709, 616)
+			    quidu      	"5DDF1E9B0385"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	350
+			    justify    	0
+			    label      	"Add attendance"
+			    pctDist    	-2.540480
+			    height     	117
+			    orientation 	1)
+			label      	(object SegLabel @127
+			    Parent_View 	@122
+			    location   	(1709, 663)
+			    quidu      	"5DDF1EAC0005"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	387
+			    justify    	0
+			    label      	"View students list"
+			    pctDist    	-2.487447
+			    height     	71
+			    orientation 	1)
+			object_arc 	@121
+			pctDist    	0.500000
+			height     	45
+			orientation 	0
+			dir        	1
+			origin     	(1672, 883)
+			terminus   	(1590, 969))
+		    (object LinkView "" @128
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DDF1CD401E3"
+			client     	@105
+			supplier   	@104
+			line_style 	0)
+		    (object MessView "" @129
+			location   	(1608, 1541)
+			line_color 	3342489
+			label      	(object SegLabel @130
+			    Parent_View 	@129
+			    location   	(1793, 1037)
+			    quidu      	"5DDF1CD401E4"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	194
+			    justify    	0
+			    label      	"Register"
+			    pctDist    	-1.069573
+			    height     	505
+			    orientation 	1)
+			label      	(object SegLabel @131
+			    Parent_View 	@129
+			    location   	(1793, 1084)
+			    quidu      	"5DDF1F230152"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	144
+			    justify    	0
+			    label      	"Login"
+			    pctDist    	-1.137413
+			    height     	460
+			    orientation 	1)
+			label      	(object SegLabel @132
+			    Parent_View 	@129
+			    location   	(1793, 1131)
+			    quidu      	"5DDF1EF80171"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	306
+			    justify    	0
+			    label      	"View projects"
+			    pctDist    	-1.205254
+			    height     	413
+			    orientation 	1)
+			label      	(object SegLabel @133
+			    Parent_View 	@129
+			    location   	(1793, 1178)
+			    quidu      	"5DDF1F4601E4"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	369
+			    justify    	0
+			    label      	"view notifications"
+			    pctDist    	-1.273095
+			    height     	366
+			    orientation 	1)
+			label      	(object SegLabel @134
+			    Parent_View 	@129
+			    location   	(1793, 1225)
+			    quidu      	"5DDF1F54014C"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	266
+			    justify    	0
+			    label      	"view marks"
+			    pctDist    	-1.340935
+			    height     	321
+			    orientation 	1)
+			label      	(object SegLabel @135
+			    Parent_View 	@129
+			    location   	(1793, 1272)
+			    quidu      	"5DDF1F600184"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	387
+			    justify    	0
+			    label      	"view assignments"
+			    pctDist    	-1.408776
+			    height     	274
+			    orientation 	1)
+			label      	(object SegLabel @136
+			    Parent_View 	@129
+			    location   	(1793, 1319)
+			    quidu      	"5DDF1F9C014F"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	356
+			    justify    	0
+			    label      	"view attendance"
+			    pctDist    	-1.476617
+			    height     	228
+			    orientation 	1)
+			object_arc 	@128
+			pctDist    	0.500000
+			height     	45
+			orientation 	0
+			dir        	1
+			origin     	(1667, 1541)
+			terminus   	(1549, 1541))
+		    (object LinkView "" @137
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DDF20550060"
+			client     	@105
+			supplier   	@103
+			line_style 	0)))))
+    root_subsystem 	(object SubSystem "Component View"
+	quid       	"5DDEF6480043"
+	physical_models 	(list unit_reference_list
+	    (object module "Admin" "NotAModuleType" "NotAModulePart"
+		quid       	"5DDF20E8025D"
+		stereotype 	""
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"5DDF21290229"
+			supplier   	"Component View::System"
+			quidu      	"5DDF2118016F"
+			supplier_is_spec 	TRUE)))
+	    (object module "Faculty" "NotAModuleType" "NotAModulePart"
+		quid       	"5DDF20EF026D"
+		stereotype 	""
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"5DDF21300138"
+			supplier   	"Component View::System"
+			quidu      	"5DDF2118016F"
+			supplier_is_spec 	TRUE)))
+	    (object module "Students" "NotAModuleType" "NotAModulePart"
+		quid       	"5DDF20F7035D"
+		stereotype 	""
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"5DDF212D0130"
+			supplier   	"Component View::System"
+			quidu      	"5DDF2118016F"
+			supplier_is_spec 	TRUE)))
+	    (object module "System" "NotAModuleType" "NotAModulePart"
+		quid       	"5DDF2118016F"
+		stereotype 	""))
+	physical_presentations 	(list unit_reference_list
+	    (object Module_Diagram "Main"
+		quid       	"5DDEF648019B"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object ModView "Component View::Admin" "NotAModuleType" "NotAModulePart" @138
+			location   	(976, 304)
+			label      	(object ItemLabel
+			    Parent_View 	@138
+			    location   	(920, 279)
+			    fill_color 	12058623
+			    anchor_loc 	3
+			    nlines     	2
+			    max_width  	211
+			    label      	"Admin")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DDF20E8025D"
+			width      	380
+			autoResize 	TRUE
+			width      	380
+			height     	162)
+		    (object ModView "Component View::Faculty" "NotAModuleType" "NotAModulePart" @139
+			location   	(960, 928)
+			label      	(object ItemLabel
+			    Parent_View 	@139
+			    location   	(904, 903)
+			    fill_color 	12058623
+			    anchor_loc 	3
+			    nlines     	2
+			    max_width  	211
+			    label      	"Faculty")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DDF20EF026D"
+			width      	380
+			autoResize 	TRUE
+			width      	380
+			height     	162)
+		    (object ModView "Component View::Students" "NotAModuleType" "NotAModulePart" @140
+			location   	(944, 592)
+			label      	(object ItemLabel
+			    Parent_View 	@140
+			    location   	(888, 567)
+			    fill_color 	12058623
+			    anchor_loc 	3
+			    nlines     	2
+			    max_width  	211
+			    label      	"Students")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DDF20F7035D"
+			width      	380
+			autoResize 	TRUE
+			width      	380
+			height     	162)
+		    (object ModView "Component View::System" "NotAModuleType" "NotAModulePart" @141
+			location   	(1760, 624)
+			label      	(object ItemLabel
+			    Parent_View 	@141
+			    location   	(1704, 599)
+			    fill_color 	12058623
+			    anchor_loc 	3
+			    nlines     	2
+			    max_width  	211
+			    label      	"System")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DDF2118016F"
+			width      	380
+			autoResize 	TRUE
+			width      	380
+			height     	162)
+		    (object ModVisView "" @142
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DDF21290229"
+			client     	@138
+			supplier   	@141
+			line_style 	0)
+		    (object ModVisView "" @143
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DDF212D0130"
+			client     	@140
+			supplier   	@141
+			line_style 	0)
+		    (object ModVisView "" @144
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DDF21300138"
+			client     	@139
+			supplier   	@141
+			line_style 	0)))))
+    process_structure 	(object Processes
+	quid       	"5DDEF6480044"
+	ProcsNDevs 	(list
+	    (object Processor "Admin"
+		quid       	"5DDF21CA00CF"
+		connections 	(list connection_list
+		    (object Connection_Relationship
+			quid       	"5DDF21FA024A"
+			supplier   	"System"
+			quidu      	"5DDF21DF02F0"
+			supplier_is_device 	FALSE))
+		characteristics 	""
+		scheduling 	"Preemptive"
+		processes  	(list processes))
+	    (object Processor "Faculty"
+		quid       	"5DDF21D001E6"
+		connections 	(list connection_list
+		    (object Connection_Relationship
+			quid       	"5DDF21FF0222"
+			supplier   	"System"
+			quidu      	"5DDF21DF02F0"
+			supplier_is_device 	FALSE))
+		characteristics 	""
+		scheduling 	"Preemptive"
+		processes  	(list processes))
+	    (object Processor "Student"
+		quid       	"5DDF21D90397"
+		connections 	(list connection_list
+		    (object Connection_Relationship
+			quid       	"5DDF22080002"
+			supplier   	"System"
+			quidu      	"5DDF21DF02F0"
+			supplier_is_device 	FALSE))
+		characteristics 	""
+		scheduling 	"Preemptive"
+		processes  	(list processes))
+	    (object Processor "System"
+		quid       	"5DDF21DF02F0"
+		characteristics 	""
+		scheduling 	"Preemptive"
+		processes  	(list processes))
+	    (object Process_Diagram "Deployment View"
+		quid       	"5DDEF6480046"
+		title      	"Deployment View"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object ProcessorView "Admin" @145
+			location   	(928, 384)
+			label      	(object ItemLabel
+			    Parent_View 	@145
+			    location   	(817, 329)
+			    nlines     	2
+			    max_width  	150
+			    justify    	0
+			    label      	"Admin")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DDF21CA00CF"
+			width      	225
+			height     	180
+			annotation 	0)
+		    (object ProcessorView "Faculty" @146
+			location   	(928, 784)
+			label      	(object ItemLabel
+			    Parent_View 	@146
+			    location   	(817, 729)
+			    nlines     	2
+			    max_width  	150
+			    justify    	0
+			    label      	"Faculty")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DDF21D001E6"
+			width      	225
+			height     	180
+			annotation 	0)
+		    (object ProcessorView "Student" @147
+			location   	(912, 1184)
+			label      	(object ItemLabel
+			    Parent_View 	@147
+			    location   	(801, 1129)
+			    nlines     	2
+			    max_width  	150
+			    justify    	0
+			    label      	"Student")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DDF21D90397"
+			width      	225
+			height     	180
+			annotation 	0)
+		    (object ProcessorView "System" @148
+			location   	(1920, 784)
+			label      	(object ItemLabel
+			    Parent_View 	@148
+			    location   	(1809, 729)
+			    nlines     	2
+			    max_width  	150
+			    justify    	0
+			    label      	"System")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5DDF21DF02F0"
+			width      	225
+			height     	180
+			annotation 	0)
+		    (object ConnectionView "" @149
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DDF21FA024A"
+			client     	@145
+			supplier   	@148
+			line_style 	0)
+		    (object ConnectionView "" @150
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DDF21FF0222"
+			client     	@146
+			supplier   	@148
+			line_style 	0)
+		    (object ConnectionView "" @151
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5DDF22080002"
+			client     	@147
+			supplier   	@148
+			line_style 	0)))))
+    properties 	(object Properties
+	quid       	"5DDEF6480045"))
